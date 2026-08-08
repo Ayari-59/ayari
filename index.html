@@ -1,0 +1,402 @@
+<title>Mohamed Ayari — ayari.pro</title>
+<style>
+:root {
+  --bg:#FAFAF6;--card:#FFFFFF;--fg:#111113;--fg2:#64635E;--fg3:#9C9B95;
+  --navy:#1B3A5C;--navy-l:#2D5F8A;--gold:#B8862D;--gold-l:#D4A23A;
+  --border:#E4E1D9;--tag-bg:#F0EDE5;--tag-fg:#5C5A53;
+  --cat-edu:#2563EB;--cat-fin:#059669;--cat-leg:#7C3AED;
+  --cat-cul:#DC2626;--cat-mus:#D97706;--cat-mkt:#DB2777;
+  --cat-reg:#6B7280;--cat-spo:#059669;
+  --geo-stroke:rgba(27,58,92,0.09);
+  --f-d:Georgia,"Palatino Linotype","Book Antiqua",Palatino,serif;
+  --f-s:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-m:ui-monospace,"Cascadia Code","SF Mono",Consolas,monospace;
+  --mw:1140px;--gut:clamp(1.25rem,4vw,2.5rem);
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#0B0D12;--card:#13161D;--fg:#EAEAE5;--fg2:#8A8983;--fg3:#5E5D58;
+  --navy:#5B9BD5;--navy-l:#7BB5E8;--gold:#D4A23A;--gold-l:#E8BC5A;
+  --border:#222630;--tag-bg:#1A1D24;--tag-fg:#9E9D97;
+  --geo-stroke:rgba(91,155,213,0.06);
+}}
+:root[data-theme="dark"]{
+  --bg:#0B0D12;--card:#13161D;--fg:#EAEAE5;--fg2:#8A8983;--fg3:#5E5D58;
+  --navy:#5B9BD5;--navy-l:#7BB5E8;--gold:#D4A23A;--gold-l:#E8BC5A;
+  --border:#222630;--tag-bg:#1A1D24;--tag-fg:#9E9D97;
+  --geo-stroke:rgba(91,155,213,0.06);
+}
+:root[data-theme="light"]{
+  --bg:#FAFAF6;--card:#FFFFFF;--fg:#111113;--fg2:#64635E;--fg3:#9C9B95;
+  --navy:#1B3A5C;--navy-l:#2D5F8A;--gold:#B8862D;--gold-l:#D4A23A;
+  --border:#E4E1D9;--tag-bg:#F0EDE5;--tag-fg:#5C5A53;
+  --geo-stroke:rgba(27,58,92,0.09);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-s);font-size:1rem;line-height:1.65;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--navy);text-decoration:none}
+a:hover{color:var(--navy-l)}
+a:focus-visible{outline:2px solid var(--navy);outline-offset:3px;border-radius:3px}
+::selection{background:var(--navy);color:#fff}
+
+.topbar{display:flex;justify-content:space-between;align-items:center;max-width:var(--mw);margin:0 auto;padding:1.5rem var(--gut) 0;position:relative;z-index:2}
+.mark{font-family:var(--f-m);font-size:.85rem;color:var(--fg3);letter-spacing:.04em}
+.mark:hover{color:var(--fg)}
+.tog{appearance:none;border:1px solid var(--border);background:transparent;color:var(--fg2);font-family:var(--f-m);font-size:.72rem;padding:.3em .7em;border-radius:100px;cursor:pointer;transition:all .2s}
+.tog:hover{border-color:var(--navy);color:var(--fg)}
+
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden}
+.hero canvas{position:absolute;top:0;right:0;width:50%;height:100%;pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:var(--mw);margin:0 auto;padding:0 var(--gut);width:100%}
+.hero h1{font-family:var(--f-d);font-size:clamp(3rem,11vw,7rem);font-weight:400;line-height:1;letter-spacing:-.03em;color:var(--fg)}
+.hero-roles{display:flex;gap:.6rem;margin-top:1.8rem;flex-wrap:wrap}
+.role{font-family:var(--f-s);font-size:.88rem;padding:.45em 1.1em;border-radius:100px;letter-spacing:.01em;font-weight:500}
+.role-prof{border:1.5px solid var(--navy);color:var(--navy)}
+.role-agent{border:1.5px solid var(--gold);color:var(--gold)}
+.role-dev{border:1.5px solid var(--cat-fin);color:var(--cat-fin)}
+
+.about{padding:4rem 0 1rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+@media(max-width:700px){.about-grid{grid-template-columns:1fr}}
+.about-block{display:flex;flex-direction:column;gap:.5rem}
+.about-label{font-family:var(--f-m);font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:.2rem}
+.about-text{color:var(--fg2);font-size:.95rem;line-height:1.8;max-width:52ch}
+.about-text strong{color:var(--fg);font-weight:500}
+.about-quote{grid-column:1/-1;border-left:3px solid var(--gold);padding-left:1.3rem;margin-top:.5rem}
+.about-quote p{font-family:var(--f-d);font-size:1.15rem;font-style:italic;color:var(--fg);line-height:1.7;max-width:60ch}
+.about-facts{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:.3rem}
+.fact{display:flex;align-items:center;gap:.4em;font-family:var(--f-m);font-size:.82rem;color:var(--fg2)}
+.fact::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--navy);flex-shrink:0}
+.hero-desc{margin-top:1.6rem;max-width:48ch;color:var(--fg2);font-size:1.05rem;line-height:1.75}
+
+.wrap{max-width:var(--mw);margin:0 auto;padding:0 var(--gut)}
+
+.sec{padding:5rem 0}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2.2rem;flex-wrap:wrap;gap:.5rem}
+.sec-title{font-family:var(--f-d);font-size:1.8rem;font-weight:400;letter-spacing:-.01em}
+.sec-count{font-family:var(--f-m);font-size:.78rem;color:var(--fg3);letter-spacing:.04em}
+.sec-line{height:1px;background:var(--border);margin-bottom:5rem}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.6rem;border-top:3.5px solid var(--cat,var(--border));display:flex;flex-direction:column;gap:.6rem;transition:transform .25s ease,box-shadow .25s ease}
+@media(prefers-reduced-motion:no-preference){
+  .card{opacity:0;transform:translateY(18px);transition:transform .25s ease,box-shadow .25s ease,opacity .5s ease .05s}
+  .card.vis{opacity:1;transform:translateY(0)}
+  .card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.07)}
+}
+@media(prefers-reduced-motion:reduce){
+  .card{opacity:1;transform:none}
+}
+
+.card-top{display:flex;justify-content:space-between;align-items:center}
+.domain{font-family:var(--f-m);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat,var(--fg3))}
+.badge{font-family:var(--f-m);font-size:.65rem;padding:.2em .6em;border-radius:100px;letter-spacing:.03em}
+.badge-live{background:#ECFDF5;color:#047857}
+.badge-dev{background:#FEF3C7;color:#92400E}
+:root[data-theme="dark"] .badge-live{background:#052E21;color:#34D399}
+:root[data-theme="dark"] .badge-dev{background:#2A1E06;color:#FCD34D}
+@media(prefers-color-scheme:dark){
+  .badge-live{background:#052E21;color:#34D399}
+  .badge-dev{background:#2A1E06;color:#FCD34D}
+}
+:root[data-theme="light"] .badge-live{background:#ECFDF5;color:#047857}
+:root[data-theme="light"] .badge-dev{background:#FEF3C7;color:#92400E}
+
+.card h3{font-family:var(--f-d);font-size:1.35rem;font-weight:400;line-height:1.25;letter-spacing:-.005em}
+.card h3 a{color:var(--fg);border-bottom:1px solid transparent;transition:border-color .2s}
+.card h3 a:hover{border-bottom-color:var(--cat,var(--navy))}
+.card-desc{color:var(--fg2);font-size:.92rem;line-height:1.7;flex:1}
+.card-tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.tag{font-family:var(--f-m);font-size:.68rem;padding:.15em .5em;background:var(--tag-bg);color:var(--tag-fg);border-radius:3px}
+.card-go{font-family:var(--f-m);font-size:.8rem;color:var(--cat,var(--navy));display:inline-flex;align-items:center;gap:.3em;margin-top:.2rem}
+.card-go:hover{color:var(--navy-l)}
+.card-go .a{display:inline-block;transition:transform .15s}
+.card-go:hover .a{transform:translateX(3px)}
+
+.stack-grid{display:flex;flex-wrap:wrap;gap:.55rem .75rem}
+.si{font-family:var(--f-m);font-size:.82rem;color:var(--fg2);display:flex;align-items:center;gap:.4em}
+.si::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+footer{max-width:var(--mw);margin:0 auto;padding:2.5rem var(--gut) 2rem;border-top:1px solid var(--border)}
+.flinks{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;font-family:var(--f-m);font-size:.85rem}
+.fsep{color:var(--fg3)}
+.flinks span{color:var(--fg2)}
+.fcopy{margin-top:.7rem;font-size:.78rem;color:var(--fg3)}
+
+@media(prefers-reduced-motion:no-preference){
+  .hero h1{animation:up .7s ease both}
+  .hero-roles{animation:up .7s ease .1s both}
+  .hero-desc{animation:up .7s ease .18s both}
+  .about-grid>*{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .about-grid>*.vis{opacity:1;transform:translateY(0)}
+  @keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+}
+@media(max-width:700px){
+  .hero{min-height:75vh}
+  .hero canvas{width:100%;opacity:.5}
+}
+</style>
+
+<header class="topbar">
+  <a href="#" class="mark" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">ayari.pro</a>
+  <button class="tog" id="tog" aria-label="Changer de theme">Sombre</button>
+</header>
+
+<section class="hero">
+  <canvas id="geo"></canvas>
+  <div class="hero-inner">
+    <h1>Mohamed<br>Ayari</h1>
+    <div class="hero-roles">
+      <span class="role role-prof">Professeur de controle de gestion</span>
+      <span class="role role-agent">Agent FIFA</span>
+      <span class="role role-dev">Developpeur full-stack</span>
+    </div>
+    <p class="hero-desc">Des grilles de lecture pour rendre accessible ce qui est complexe&nbsp;&mdash; dans un amphitheatre, sur un terrain, ou derriere un ecran.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="sec-line"></div>
+
+  <section class="about">
+    <div class="sec-head">
+      <h2 class="sec-title">A propos</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-block">
+        <p class="about-label">Parcours</p>
+        <p class="about-text">Ne a <strong>Tunis</strong>, lycee hotelier a <strong>Montargis</strong>, puis <strong>Nice</strong>&nbsp;&mdash; DEA de Sciences de gestion a l'IAE, ecole doctorale, recherche sur la gouvernance et la qualite de l'information financiere. Aujourd'hui professeur de controle de gestion et de communication professionnelle en DCG et DSCG au <strong>campus La Salle, Lille</strong>. Expertise forgee dans le <strong>numerique educatif</strong>, desormais tournee vers l'<strong>IA au service des apprentissages</strong>.</p>
+      </div>
+      <div class="about-block">
+        <p class="about-label">Agent FIFA</p>
+        <p class="about-text">Examen d'agent FIFA obtenu en <strong>novembre 2024</strong>. Une seconde carriere qui prolonge naturellement la maitrise de la gestion, de la negociation et de l'analyse financiere appliquees au monde du football professionnel.</p>
+      </div>
+      <div class="about-quote">
+        <p>Trouver des grilles de lecture qui rendent accessibles les problematiques les plus complexes et faire emerger le besoin de savoir et d'apprendre.</p>
+      </div>
+      <div class="about-block">
+        <p class="about-label">Et aussi</p>
+        <div class="about-facts">
+          <span class="fact">55 ans</span>
+          <span class="fact">Tunis &rarr; Montargis &rarr; Nice &rarr; Lille</span>
+          <span class="fact">Football</span>
+          <span class="fact">Basket</span>
+          <span class="fact">Tennis</span>
+          <span class="fact">Developpeur autodidacte</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sec-line"></div>
+
+  <section class="sec">
+    <div class="sec-head">
+      <h2 class="sec-title">Realisations</h2>
+      <span class="sec-count">6 projets en ligne</span>
+    </div>
+    <div class="grid">
+
+      <article class="card" style="--cat:var(--cat-edu)">
+        <div class="card-top">
+          <span class="domain">Edtech</span>
+          <span class="badge badge-live">En ligne</span>
+        </div>
+        <h3><a href="https://www.objectif-dcg.fr" target="_blank" rel="noopener">Objectif-DCG.fr</a></h3>
+        <p class="card-desc">Plateforme pedagogique pour le DCG et le DSCG. 28&nbsp;chapitres, 7&nbsp;onglets par chapitre, 482&nbsp;QCM, 131&nbsp;exercices. Programme renove 2025.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js 16</span><span class="tag">Prisma 7</span><span class="tag">Neon</span><span class="tag">Tailwind 4</span>
+        </div>
+        <a class="card-go" href="https://www.objectif-dcg.fr" target="_blank" rel="noopener">objectif-dcg.fr <span class="a">&rarr;</span></a>
+      </article>
+
+      <article class="card" style="--cat:var(--cat-fin)">
+        <div class="card-top">
+          <span class="domain">Fintech</span>
+          <span class="badge badge-live">En ligne</span>
+        </div>
+        <h3>Plateforme Optimus</h3>
+        <p class="card-desc">Deux SaaS d'optimisation de remuneration. <strong>Dirigeant Optimizer</strong>&nbsp;: simulation IR/IS/TNS, 5&nbsp;scenarios, scoring IA, rapport PDF. <strong>Optimus Liberal</strong>&nbsp;: comparateur de 6&nbsp;structures juridiques.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js 15</span><span class="tag">Prisma 7</span><span class="tag">Auth.js</span><span class="tag">Recharts</span><span class="tag">pdf-lib</span>
+        </div>
+        <a class="card-go" href="https://optimus-liberal-dirigeant-optimizer.vercel.app" target="_blank" rel="noopener">Dirigeant Optimizer <span class="a">&rarr;</span></a>
+      </article>
+
+      <article class="card" style="--cat:var(--cat-leg)">
+        <div class="card-top">
+          <span class="domain">Legaltech</span>
+          <span class="badge badge-live">En ligne</span>
+        </div>
+        <h3>Lanceo</h3>
+        <p class="card-desc">Plateforme SaaS de creation d'entreprise et marketplace d'experts. Questionnaire intelligent, recommandation de forme juridique, generation de documents&nbsp;&mdash; de l'idee a l'immatriculation.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js 15</span><span class="tag">React 19</span><span class="tag">Radix UI</span><span class="tag">NextAuth v5</span>
+        </div>
+      </article>
+
+      <article class="card" style="--cat:var(--cat-cul)">
+        <div class="card-top">
+          <span class="domain">Culture &amp; Sport</span>
+          <span class="badge badge-live">En ligne</span>
+        </div>
+        <h3><a href="https://www.zaalouni105.com" target="_blank" rel="noopener">Zaalouni105.com</a></h3>
+        <p class="card-desc">Recit immersif du but de Zaalouni a la 105<sup>e</sup>&nbsp;minute du derby EST&ndash;CA. Le goal qui offre au Club Africain son 14<sup>e</sup>&nbsp;titre de champion.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js 15</span><span class="tag">Tailwind 4</span><span class="tag">Static</span>
+        </div>
+        <a class="card-go" href="https://www.zaalouni105.com" target="_blank" rel="noopener">zaalouni105.com <span class="a">&rarr;</span></a>
+      </article>
+
+      <article class="card" style="--cat:var(--cat-mus)">
+        <div class="card-top">
+          <span class="domain">Musique</span>
+          <span class="badge badge-live">En ligne</span>
+        </div>
+        <h3><a href="https://haithemsherif.com" target="_blank" rel="noopener">HaithemSherif.com</a></h3>
+        <p class="card-desc">Vitrine d'artiste pour le chanteur tunisien Haithem Sherif. Design oriental sombre et dore, contenu bilingue FR/AR, discographie, espace d'administration autonome.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js 15</span><span class="tag">Neon</span><span class="tag">Vercel Blob</span><span class="tag">JWT</span>
+        </div>
+        <a class="card-go" href="https://haithemsherif.com" target="_blank" rel="noopener">haithemsherif.com <span class="a">&rarr;</span></a>
+      </article>
+
+      <article class="card" style="--cat:var(--cat-spo)">
+        <div class="card-top">
+          <span class="domain">Sport / Gestion</span>
+          <span class="badge badge-live">En ligne</span>
+        </div>
+        <h3><a href="https://agent-fifa.pro" target="_blank" rel="noopener">Agent FIFA Pro</a></h3>
+        <p class="card-desc">Application de gestion pour agents sportifs. Traitement de documents PDF, paiements Stripe, internationalisation.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js 16</span><span class="tag">Prisma 7</span><span class="tag">Stripe</span><span class="tag">next-intl</span>
+        </div>
+        <a class="card-go" href="https://agent-fifa.pro" target="_blank" rel="noopener">agent-fifa.pro <span class="a">&rarr;</span></a>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="sec-line"></div>
+
+  <section class="sec">
+    <div class="sec-head">
+      <h2 class="sec-title">En developpement</h2>
+      <span class="sec-count">3 projets</span>
+    </div>
+    <div class="grid">
+
+      <article class="card" style="--cat:var(--cat-cul)">
+        <div class="card-top">
+          <span class="domain">Media sportif</span>
+          <span class="badge badge-dev">En dev</span>
+        </div>
+        <h3>CA1920.com</h3>
+        <p class="card-desc">Media independant sur le Club Africain. Moteur de veille editoriale CA1920 Radar&nbsp;: collecte multi-sources, deduplication, scoring de confiance.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js 15</span><span class="tag">pgvector</span><span class="tag">Prisma 7</span>
+        </div>
+      </article>
+
+      <article class="card" style="--cat:var(--cat-mkt)">
+        <div class="card-top">
+          <span class="domain">Marketing digital</span>
+          <span class="badge badge-dev">En dev</span>
+        </div>
+        <h3>Pulsar</h3>
+        <p class="card-desc">Hub de marketing social avec generation de contenu IA, planification, analytics et inbox multi-plateformes.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js 16</span><span class="tag">Supabase</span><span class="tag">Stripe</span><span class="tag">OpenAI</span>
+        </div>
+      </article>
+
+      <article class="card" style="--cat:var(--cat-reg)">
+        <div class="card-top">
+          <span class="domain">Conformite</span>
+          <span class="badge badge-dev">En dev</span>
+        </div>
+        <h3>Regtech Flow</h3>
+        <p class="card-desc">Plateforme RegTech de conformite reglementaire. Ingestion de documents, scoring automatise, piste d'audit verifiable.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js 15</span><span class="tag">Supabase</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="sec-line"></div>
+
+  <section class="sec" style="padding-bottom:2rem">
+    <div class="sec-head">
+      <h2 class="sec-title">Stack technique</h2>
+    </div>
+    <div class="stack-grid">
+      <span class="si">Next.js 15&ndash;16</span>
+      <span class="si">TypeScript</span>
+      <span class="si">React 19</span>
+      <span class="si">Tailwind CSS 4</span>
+      <span class="si">Prisma 7</span>
+      <span class="si">PostgreSQL / Neon</span>
+      <span class="si">Auth.js v5</span>
+      <span class="si">Vercel</span>
+      <span class="si">Recharts</span>
+      <span class="si">Zod</span>
+      <span class="si">pdf-lib</span>
+      <span class="si">Supabase</span>
+      <span class="si">Stripe</span>
+      <span class="si">Turborepo</span>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="flinks">
+    <a href="https://www.linkedin.com/in/m-ayari/" target="_blank" rel="noopener">LinkedIn</a>
+    <span class="fsep">&middot;</span>
+    <a href="https://github.com/Ayari-59" target="_blank" rel="noopener">GitHub</a>
+    <span class="fsep">&middot;</span>
+    <a href="mailto:contact@ayari.pro">contact@ayari.pro</a>
+    <span class="fsep">&middot;</span>
+    <span>Lille</span>
+  </div>
+  <p class="fcopy">&copy; 2026 Mohamed Ayari</p>
+</footer>
+
+<script>
+(function(){
+  var tog=document.getElementById('tog'),root=document.documentElement;
+  function isDark(){var d=root.getAttribute('data-theme');return d==='dark'||(d!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches)}
+  function sync(){tog.textContent=isDark()?'Clair':'Sombre'}
+  tog.addEventListener('click',function(){var n=isDark()?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('ayari-t',n)}catch(e){}sync();drawGeo()});
+  try{var s=localStorage.getItem('ayari-t');if(s)root.setAttribute('data-theme',s)}catch(e){}
+  sync();
+
+  var c=document.getElementById('geo'),ctx=c.getContext('2d'),dpr=window.devicePixelRatio||1,ang=0,raf;
+  var reducedMotion=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function resize(){var r=c.parentElement.getBoundingClientRect();c.width=r.width*dpr;c.height=r.height*dpr;c.style.width=r.width+'px';c.style.height=r.height+'px';ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function drawGeo(){
+    var w=c.width/dpr,h=c.height/dpr;
+    ctx.clearRect(0,0,w,h);
+    var col=getComputedStyle(root).getPropertyValue('--geo-stroke').trim();
+    ctx.strokeStyle=col;ctx.lineWidth=.8;
+    var cx=w*.68,cy=h*.48,r=Math.min(w,h)*.38;
+    for(var i=1;i<=6;i++){ctx.beginPath();ctx.arc(cx,cy,r*i/6,0,Math.PI*2);ctx.stroke()}
+    for(var i=0;i<16;i++){var a=ang+i*Math.PI/8;ctx.beginPath();ctx.moveTo(cx+Math.cos(a)*r*.15,cy+Math.sin(a)*r*.15);ctx.lineTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r);ctx.stroke()}
+    ctx.lineWidth=1.2;
+    for(var i=0;i<2;i++){ctx.save();ctx.translate(cx,cy);ctx.rotate(ang+i*Math.PI/4);var s=r*.72;ctx.strokeRect(-s/2,-s/2,s,s);ctx.restore()}
+    ctx.lineWidth=.6;
+    for(var i=0;i<4;i++){ctx.save();ctx.translate(cx,cy);ctx.rotate(ang+i*Math.PI/4);var s2=r*.5;ctx.beginPath();ctx.moveTo(0,-s2);ctx.lineTo(s2,0);ctx.lineTo(0,s2);ctx.lineTo(-s2,0);ctx.closePath();ctx.stroke();ctx.restore()}
+  }
+  function loop(){drawGeo();if(!reducedMotion){ang+=.0004;raf=requestAnimationFrame(loop)}}
+  window.addEventListener('resize',function(){resize();drawGeo()});
+  resize();loop();
+
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.08});
+  document.querySelectorAll('.card').forEach(function(el,i){el.style.transitionDelay=((i%2)*.1)+'s';obs.observe(el)});
+  document.querySelectorAll('.about-grid > *').forEach(function(el,i){el.style.transitionDelay=(i*.08)+'s';obs.observe(el)});
+})();
+</script>
