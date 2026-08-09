@@ -37,6 +37,10 @@
   --accent-spo: #047857;
   --accent-mkt: #DB2777;
   --accent-reg: #6B7280;
+  --pil-fin: #1746A2;
+  --pil-form: #2563EB;
+  --pil-dig: #059669;
+  --pil-fifa: #D97706;
   --shadow: 0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.04);
   --shadow-l: 0 8px 40px rgba(0,0,0,.08);
   --f-d: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -66,6 +70,10 @@
   --tag-fg: #9E9D97;
   --shadow: 0 1px 3px rgba(0,0,0,.15), 0 4px 16px rgba(0,0,0,.15);
   --shadow-l: 0 8px 40px rgba(0,0,0,.3);
+  --pil-fin: #6BA3E8;
+  --pil-form: #60A5FA;
+  --pil-dig: #34D399;
+  --pil-fifa: #FBBF24;
 }}
 :root[data-theme="dark"] {
   --bg: #090D14;--bg2: #0F1319;--card: #13161D;--fg: #EAEAE5;--fg2: #A0A09C;--fg3: #5E5D58;
@@ -74,6 +82,7 @@
   --border: #1E2230;--border-l: #171B24;--tag-bg: #1A1D24;--tag-fg: #9E9D97;
   --shadow: 0 1px 3px rgba(0,0,0,.15), 0 4px 16px rgba(0,0,0,.15);
   --shadow-l: 0 8px 40px rgba(0,0,0,.3);
+  --pil-fin: #6BA3E8;--pil-form: #60A5FA;--pil-dig: #34D399;--pil-fifa: #FBBF24;
 }
 :root[data-theme="light"] {
   --bg: #FAFAF8;--bg2: #F1F0EC;--card: #FFFFFF;--fg: #111113;--fg2: #4A4A48;--fg3: #8A8A86;
@@ -82,6 +91,7 @@
   --border: #E4E1D9;--border-l: #EDEBE5;--tag-bg: #F0EDE5;--tag-fg: #5C5A53;
   --shadow: 0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.04);
   --shadow-l: 0 8px 40px rgba(0,0,0,.08);
+  --pil-fin: #1746A2;--pil-form: #2563EB;--pil-dig: #059669;--pil-fifa: #D97706;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -125,16 +135,25 @@ img { max-width: 100%; display: block; }
 .hero-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; }
 .hero-bg canvas { width: 100%; height: 100%; }
 .hero-inner { position: relative; z-index: 1; max-width: var(--mw); margin: 0 auto; padding: 0 var(--gut); width: 100%; }
-.hero-top { font-family: var(--f-m); font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; color: var(--gold); margin-bottom: 1.8rem; }
+.hero-stripe { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig), var(--pil-fifa)); z-index: 101; }
+.hero-top { font-family: var(--f-m); font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; color: var(--fg3); margin-bottom: 1.8rem; display: flex; gap: .3em; flex-wrap: wrap; }
+.hero-top-w { transition: color .3s; }
+.hero-top-w:nth-child(1) { color: var(--pil-fin); }
+.hero-top-w:nth-child(2) { color: var(--fg3); }
+.hero-top-w:nth-child(3) { color: var(--pil-form); }
+.hero-top-w:nth-child(4) { color: var(--fg3); }
+.hero-top-w:nth-child(5) { color: var(--pil-dig); }
+.hero-top-w:nth-child(6) { color: var(--fg3); }
+.hero-top-w:nth-child(7) { color: var(--pil-fifa); }
 .hero h1 { font-family: var(--f-d); font-size: clamp(2.8rem, 8vw, 5.5rem); font-weight: 400; line-height: 1.05; letter-spacing: -.025em; color: var(--fg); margin-bottom: 1rem; }
 .hero-baseline { font-family: var(--f-d); font-size: clamp(1.15rem, 2.5vw, 1.5rem); color: var(--gold); font-style: italic; letter-spacing: .01em; margin-bottom: 1.6rem; }
 .hero-sub { font-family: var(--f-s); font-size: clamp(.92rem, 1.5vw, 1.05rem); color: var(--fg2); max-width: 52ch; line-height: 1.8; margin-bottom: 2.2rem; }
 .hero-roles { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-.hero-role { font-family: var(--f-s); font-size: .82rem; padding: .4em 1em; border-radius: 100px; font-weight: 500; letter-spacing: .01em; }
-.hr-fin { border: 1.5px solid var(--navy); color: var(--navy); }
-.hr-ens { border: 1.5px solid var(--accent-edu); color: var(--accent-edu); }
-.hr-dig { border: 1.5px solid var(--accent-fin); color: var(--accent-fin); }
-.hr-fifa { border: 1.5px solid var(--gold); color: var(--gold); }
+.hero-role { font-family: var(--f-s); font-size: .82rem; padding: .4em 1em; border-radius: 100px; font-weight: 600; letter-spacing: .01em; border: none; }
+.hr-fin { background: color-mix(in srgb, var(--pil-fin) 14%, transparent); color: var(--pil-fin); }
+.hr-ens { background: color-mix(in srgb, var(--pil-form) 14%, transparent); color: var(--pil-form); }
+.hr-dig { background: color-mix(in srgb, var(--pil-dig) 14%, transparent); color: var(--pil-dig); }
+.hr-fifa { background: color-mix(in srgb, var(--pil-fifa) 14%, transparent); color: var(--pil-fifa); }
 .hero-ctas { display: flex; gap: .8rem; flex-wrap: wrap; }
 .btn { font-family: var(--f-s); font-size: .9rem; font-weight: 500; padding: .65em 1.6em; border-radius: 8px; display: inline-flex; align-items: center; gap: .4em; transition: all .2s; text-decoration: none; cursor: pointer; border: none; }
 .btn-primary { background: var(--navy); color: #fff; }
@@ -158,6 +177,10 @@ img { max-width: 100%; display: block; }
 .sec-alt { background: var(--bg2); }
 .sec-head { margin-bottom: 3rem; }
 .sec-label { font-family: var(--f-m); font-size: .7rem; text-transform: uppercase; letter-spacing: .15em; color: var(--gold); margin-bottom: .6rem; }
+.sec-label-fin { color: var(--pil-fin); }
+.sec-label-form { color: var(--pil-form); }
+.sec-label-dig { color: var(--pil-dig); }
+.sec-label-fifa { color: var(--pil-fifa); }
 .sec-title { font-family: var(--f-d); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 400; letter-spacing: -.01em; color: var(--fg); line-height: 1.2; }
 .sec-desc { color: var(--fg2); font-size: .98rem; line-height: 1.8; max-width: 60ch; margin-top: .8rem; }
 .sec-divider { height: 1px; background: var(--border); }
@@ -168,11 +191,18 @@ img { max-width: 100%; display: block; }
 .about-text { color: var(--fg2); font-size: .95rem; line-height: 1.85; }
 .about-text strong { color: var(--fg); font-weight: 600; }
 .about-text p + p { margin-top: 1rem; }
-.about-quote { border-left: 3px solid var(--gold); padding-left: 1.3rem; margin-top: 1.5rem; }
+.about-quote { border-left: none; padding-left: 1.5rem; margin-top: 1.5rem; position: relative; }
+.about-quote::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--pil-fin), var(--pil-form), var(--pil-dig), var(--pil-fifa)); border-radius: 2px; }
 .about-quote p { font-family: var(--f-d); font-size: 1.05rem; font-style: italic; color: var(--fg); line-height: 1.7; }
 .about-facts { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
 .about-fact { display: flex; align-items: center; gap: .5em; font-family: var(--f-m); font-size: .8rem; color: var(--fg2); }
-.about-fact::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+.about-fact::before { content: ''; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+.about-fact:nth-child(1)::before { background: var(--pil-fin); }
+.about-fact:nth-child(2)::before { background: var(--pil-form); }
+.about-fact:nth-child(3)::before { background: var(--pil-dig); }
+.about-fact:nth-child(4)::before { background: var(--pil-fifa); }
+.about-fact:nth-child(5)::before { background: var(--pil-fin); }
+.about-fact:nth-child(6)::before { background: var(--pil-form); }
 
 /* ─── PILLARS ─── */
 .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
@@ -194,9 +224,9 @@ img { max-width: 100%; display: block; }
 .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 @media (max-width: 768px) { .expertise-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .expertise-grid { grid-template-columns: 1fr; } }
-.expertise-item { padding: 1.4rem; border: 1px solid var(--border); border-radius: var(--r); background: var(--card); transition: border-color .2s; }
-.expertise-item:hover { border-color: var(--gold); }
-.expertise-item h4 { font-family: var(--f-d); font-size: .98rem; font-weight: 400; color: var(--fg); margin-bottom: .5rem; }
+.expertise-item { padding: 1.4rem; padding-left: 1.6rem; border: 1px solid var(--border); border-left: 3px solid var(--e-color, var(--gold)); border-radius: var(--r); background: var(--card); transition: border-color .2s, box-shadow .2s; }
+.expertise-item:hover { border-color: var(--e-color, var(--gold)); box-shadow: var(--shadow); }
+.expertise-item h4 { font-family: var(--f-d); font-size: .98rem; font-weight: 400; color: var(--e-color, var(--fg)); margin-bottom: .5rem; }
 .expertise-item p { font-size: .84rem; color: var(--fg3); line-height: 1.6; }
 
 /* ─── FORMATION ─── */
@@ -204,11 +234,11 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) { .formation-content { grid-template-columns: 1fr; gap: 2rem; } }
 .formation-text { color: var(--fg2); font-size: .95rem; line-height: 1.85; }
 .formation-text p + p { margin-top: 1rem; }
-.formation-highlight { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 2rem; }
+.formation-highlight { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--pil-form); border-radius: var(--r); padding: 2rem; }
 .formation-highlight h4 { font-family: var(--f-d); font-size: 1.1rem; color: var(--fg); margin-bottom: 1rem; }
 .formation-stat { display: flex; align-items: baseline; gap: .6rem; padding: .7rem 0; border-bottom: 1px solid var(--border-l); }
 .formation-stat:last-child { border-bottom: none; }
-.formation-stat strong { font-family: var(--f-d); font-size: 1.6rem; color: var(--navy); font-weight: 400; min-width: 3ch; }
+.formation-stat strong { font-family: var(--f-d); font-size: 1.6rem; color: var(--pil-form); font-weight: 400; min-width: 3ch; }
 .formation-stat span { font-size: .9rem; color: var(--fg2); }
 
 /* ─── PROJECTS ─── */
@@ -244,7 +274,7 @@ img { max-width: 100%; display: block; }
 .fifa-text p + p { margin-top: 1rem; }
 .fifa-services { list-style: none; display: flex; flex-direction: column; gap: .6rem; margin-top: 1.5rem; }
 .fifa-services li { display: flex; align-items: flex-start; gap: .6rem; font-size: .9rem; color: var(--fg2); }
-.fifa-services li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: .55em; }
+.fifa-services li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--pil-fifa); flex-shrink: 0; margin-top: .55em; }
 .fifa-ctas { display: flex; flex-direction: column; gap: .8rem; margin-top: 1.5rem; }
 .fifa-cta { display: flex; align-items: center; gap: .8rem; padding: 1rem 1.3rem; border: 1px solid var(--border); border-radius: var(--r); transition: all .2s; text-decoration: none; color: var(--fg); }
 .fifa-cta:hover { border-color: var(--gold); background: color-mix(in srgb, var(--gold) 5%, transparent); color: var(--fg); }
@@ -262,7 +292,13 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 2rem; } }
 .contact-reasons { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
 .contact-reasons li { display: flex; align-items: center; gap: .5rem; font-size: .92rem; color: var(--fg2); padding: .5em 0; border-bottom: 1px solid var(--border-l); }
-.contact-reasons li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--navy); flex-shrink: 0; }
+.contact-reasons li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+.contact-reasons li:nth-child(1)::before { background: var(--pil-fin); }
+.contact-reasons li:nth-child(2)::before { background: var(--pil-form); }
+.contact-reasons li:nth-child(3)::before { background: var(--pil-dig); }
+.contact-reasons li:nth-child(4)::before { background: var(--pil-fifa); }
+.contact-reasons li:nth-child(5)::before { background: var(--pil-fifa); }
+.contact-reasons li:nth-child(6)::before { background: var(--pil-dig); }
 .contact-channels { display: flex; flex-direction: column; gap: 1rem; }
 .contact-card { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--r); transition: all .2s; text-decoration: none; color: var(--fg); }
 .contact-card:hover { border-color: var(--navy); box-shadow: var(--shadow); color: var(--fg); }
@@ -272,7 +308,8 @@ img { max-width: 100%; display: block; }
 .contact-card-val { font-size: .95rem; color: var(--fg); }
 
 /* ─── FOOTER ─── */
-footer { border-top: 1px solid var(--border); padding: 3rem 0; }
+footer { border-top: none; padding: 3rem 0; position: relative; }
+footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig), var(--pil-fifa)); }
 .footer-inner { max-width: var(--mw); margin: 0 auto; padding: 0 var(--gut); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .footer-copy { font-size: .8rem; color: var(--fg3); }
 .footer-links { display: flex; gap: 1rem; align-items: center; }
@@ -317,10 +354,11 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0; }
 </nav>
 
 <!-- HERO -->
+<div class="hero-stripe"></div>
 <section class="hero" id="hero">
   <div class="hero-bg"><canvas id="geo"></canvas></div>
   <div class="hero-inner">
-    <p class="hero-top">Finance &middot; Formation &middot; Digital &middot; Football Business</p>
+    <p class="hero-top"><span class="hero-top-w">Finance</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Formation</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Digital</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Football Business</span></p>
     <h1>Mohamed<br>Ayari</h1>
     <p class="hero-baseline">Analyser. Structurer. D&eacute;velopper.</p>
     <p class="hero-sub">Au croisement de la finance, de la formation, du digital et du football professionnel. Transformer l'expertise en solutions concr&egrave;tes &mdash; dans une salle de cours, un conseil d'administration ou un vestiaire.</p>
@@ -386,25 +424,25 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0; }
       <p class="sec-desc">L&agrave; o&ugrave; d'autres s&eacute;parent finance, enseignement, digital et sport, Mohamed Ayari les connecte.</p>
     </div>
     <div class="pillars">
-      <div class="pillar anim" style="--p-color: var(--navy)">
+      <div class="pillar anim" style="--p-color: var(--pil-fin)">
         <div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
         <h3>Finance &amp; Management</h3>
         <p>Contr&ocirc;le de gestion, pilotage de la performance, analyse financi&egrave;re, aide &agrave; la d&eacute;cision. L'expertise qui structure toutes les autres.</p>
         <a href="#expertise" class="pillar-link">En savoir plus <span class="arr">&rarr;</span></a>
       </div>
-      <div class="pillar anim" style="--p-color: var(--accent-edu); transition-delay:.06s">
+      <div class="pillar anim" style="--p-color: var(--pil-form); transition-delay:.06s">
         <div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
         <h3>Formation &amp; Transmission</h3>
         <p>DCG, DSCG, contr&ocirc;le de gestion, finance. Enseigner, c'est rendre accessible ce qui est complexe &mdash; en amphi comme sur une plateforme.</p>
         <a href="#formation" class="pillar-link">D&eacute;couvrir <span class="arr">&rarr;</span></a>
       </div>
-      <div class="pillar anim" style="--p-color: var(--accent-fin); transition-delay:.12s">
+      <div class="pillar anim" style="--p-color: var(--pil-dig); transition-delay:.12s">
         <div class="pillar-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
         <h3>Digital, IA &amp; Entrepreneuriat</h3>
         <p>Plateformes SaaS, EdTech, FinTech, LegalTech, intelligence artificielle. Transformer l'expertise m&eacute;tier en produits num&eacute;riques.</p>
         <a href="#projets" class="pillar-link">Voir les projets <span class="arr">&rarr;</span></a>
       </div>
-      <div class="pillar anim" style="--p-color: var(--gold); transition-delay:.18s">
+      <div class="pillar anim" style="--p-color: var(--pil-fifa); transition-delay:.18s">
         <div class="pillar-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg></div>
         <h3>Football Business &amp; FIFA</h3>
         <p>Agent de joueurs licence FIFA. Recrutement, scouting, d&eacute;veloppement de carri&egrave;re, strat&eacute;gie de clubs.</p>
@@ -418,32 +456,32 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0; }
 <section class="sec" id="expertise">
   <div class="wrap">
     <div class="sec-head anim">
-      <p class="sec-label">Comp&eacute;tences</p>
+      <p class="sec-label sec-label-fin">Comp&eacute;tences</p>
       <h2 class="sec-title">Domaines d'expertise</h2>
       <p class="sec-desc">Une approche transversale au service de la d&eacute;cision.</p>
     </div>
     <div class="expertise-grid">
-      <div class="expertise-item anim">
+      <div class="expertise-item anim" style="--e-color: var(--pil-fin)">
         <h4>Finance &amp; Contr&ocirc;le de gestion</h4>
         <p>Budgets, tableaux de bord, analyse des &eacute;carts, pilotage de la performance, comptabilit&eacute; analytique.</p>
       </div>
-      <div class="expertise-item anim" style="transition-delay:.04s">
+      <div class="expertise-item anim" style="--e-color: var(--pil-fin); transition-delay:.04s">
         <h4>Comptabilit&eacute;</h4>
         <p>Comptabilit&eacute; financi&egrave;re, comptabilit&eacute; de gestion, normes comptables, analyse des &eacute;tats financiers.</p>
       </div>
-      <div class="expertise-item anim" style="transition-delay:.08s">
+      <div class="expertise-item anim" style="--e-color: var(--navy); transition-delay:.08s">
         <h4>Management &amp; Strat&eacute;gie</h4>
         <p>Strat&eacute;gie d'entreprise, analyse concurrentielle, aide &agrave; la d&eacute;cision, gouvernance.</p>
       </div>
-      <div class="expertise-item anim" style="transition-delay:.12s">
+      <div class="expertise-item anim" style="--e-color: var(--pil-form); transition-delay:.12s">
         <h4>Formation</h4>
         <p>P&eacute;dagogie, ing&eacute;nierie de formation, conception de ressources, EdTech, &eacute;valuation.</p>
       </div>
-      <div class="expertise-item anim" style="transition-delay:.16s">
+      <div class="expertise-item anim" style="--e-color: var(--pil-dig); transition-delay:.16s">
         <h4>Digital &amp; IA</h4>
         <p>Plateformes SaaS, automatisation, IA appliqu&eacute;e, transformation digitale, d&eacute;veloppement web.</p>
       </div>
-      <div class="expertise-item anim" style="transition-delay:.2s">
+      <div class="expertise-item anim" style="--e-color: var(--pil-fifa); transition-delay:.2s">
         <h4>Football Business</h4>
         <p>Transferts, contrats, scouting, d&eacute;veloppement de carri&egrave;re, &eacute;conomie du football, structuration de clubs.</p>
       </div>
@@ -457,7 +495,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0; }
 <section class="sec" id="formation">
   <div class="wrap">
     <div class="sec-head anim">
-      <p class="sec-label">Enseignement</p>
+      <p class="sec-label sec-label-form">Enseignement</p>
       <h2 class="sec-title">Former, transmettre, outiller</h2>
       <p class="sec-desc">L'enseignement comme levier de d&eacute;veloppement.</p>
     </div>
@@ -488,7 +526,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0; }
 <section class="sec" id="projets">
   <div class="wrap">
     <div class="sec-head anim">
-      <p class="sec-label">R&eacute;alisations</p>
+      <p class="sec-label sec-label-dig">R&eacute;alisations</p>
       <h2 class="sec-title">Construire des solutions</h2>
       <p class="sec-desc">De l'expertise m&eacute;tier au produit num&eacute;rique. Chaque projet na&icirc;t d'un besoin r&eacute;el.</p>
     </div>
@@ -574,7 +612,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0; }
 
     <!-- EN DEV -->
     <div class="sec-head anim" style="margin-top:4rem">
-      <p class="sec-label">En cours</p>
+      <p class="sec-label sec-label-dig">En cours</p>
       <h2 class="sec-title">En d&eacute;veloppement</h2>
     </div>
     <div class="projects-grid">
@@ -621,7 +659,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0; }
 <section class="sec sec-alt" id="fifa">
   <div class="wrap">
     <div class="sec-head anim">
-      <p class="sec-label">Football Business</p>
+      <p class="sec-label sec-label-fifa">Football Business</p>
       <h2 class="sec-title">Agent FIFA</h2>
       <p class="sec-desc">Accompagner les joueurs. Conseiller les clubs.</p>
     </div>
@@ -771,16 +809,17 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0; }
   function drawGeo() {
     var w = c.width / dpr, h = c.height / dpr;
     ctx.clearRect(0, 0, w, h);
-    var style = getComputedStyle(root);
-    var col = isDark() ? 'rgba(91,155,213,0.04)' : 'rgba(15,43,76,0.05)';
-    ctx.strokeStyle = col; ctx.lineWidth = .7;
+    var dk = isDark();
+    var colors = dk
+      ? ['rgba(107,163,232,.06)', 'rgba(96,165,250,.06)', 'rgba(52,211,153,.06)', 'rgba(251,191,36,.06)']
+      : ['rgba(23,70,162,.06)', 'rgba(37,99,235,.06)', 'rgba(5,150,105,.06)', 'rgba(217,119,6,.06)'];
     var cx = w * .72, cy = h * .45, r = Math.min(w, h) * .35;
-    for (var i = 1; i <= 8; i++) { ctx.beginPath(); ctx.arc(cx, cy, r * i / 8, 0, Math.PI * 2); ctx.stroke(); }
-    for (var i = 0; i < 16; i++) { var a = ang + i * Math.PI / 8; ctx.beginPath(); ctx.moveTo(cx + Math.cos(a) * r * .1, cy + Math.sin(a) * r * .1); ctx.lineTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r); ctx.stroke(); }
+    for (var i = 1; i <= 8; i++) { ctx.strokeStyle = colors[i % 4]; ctx.lineWidth = .7; ctx.beginPath(); ctx.arc(cx, cy, r * i / 8, 0, Math.PI * 2); ctx.stroke(); }
+    for (var i = 0; i < 16; i++) { ctx.strokeStyle = colors[i % 4]; ctx.lineWidth = .6; var a = ang + i * Math.PI / 8; ctx.beginPath(); ctx.moveTo(cx + Math.cos(a) * r * .1, cy + Math.sin(a) * r * .1); ctx.lineTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r); ctx.stroke(); }
     ctx.lineWidth = 1;
-    for (var i = 0; i < 2; i++) { ctx.save(); ctx.translate(cx, cy); ctx.rotate(ang + i * Math.PI / 4); var sz = r * .7; ctx.strokeRect(-sz/2, -sz/2, sz, sz); ctx.restore(); }
+    for (var i = 0; i < 2; i++) { ctx.strokeStyle = colors[i]; ctx.save(); ctx.translate(cx, cy); ctx.rotate(ang + i * Math.PI / 4); var sz = r * .7; ctx.strokeRect(-sz/2, -sz/2, sz, sz); ctx.restore(); }
     ctx.lineWidth = .5;
-    for (var i = 0; i < 4; i++) { ctx.save(); ctx.translate(cx, cy); ctx.rotate(ang + i * Math.PI / 4); var s2 = r * .5; ctx.beginPath(); ctx.moveTo(0, -s2); ctx.lineTo(s2, 0); ctx.lineTo(0, s2); ctx.lineTo(-s2, 0); ctx.closePath(); ctx.stroke(); ctx.restore(); }
+    for (var i = 0; i < 4; i++) { ctx.strokeStyle = colors[i]; ctx.save(); ctx.translate(cx, cy); ctx.rotate(ang + i * Math.PI / 4); var s2 = r * .5; ctx.beginPath(); ctx.moveTo(0, -s2); ctx.lineTo(s2, 0); ctx.lineTo(0, s2); ctx.lineTo(-s2, 0); ctx.closePath(); ctx.stroke(); ctx.restore(); }
   }
   function loop() { drawGeo(); if (!reducedMotion) { ang += .0003; requestAnimationFrame(loop); } }
   window.addEventListener('resize', function() { resize(); drawGeo(); });
