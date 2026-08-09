@@ -1,449 +1,797 @@
-<title>Mohamed Ayari — ayari.pro</title>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Ayari — Finance, Formation, Digital & Football Business</title>
+<meta name="description" content="Mohamed Ayari, professeur de gestion, entrepreneur digital et agent FIFA. Expertise en controle de gestion, DCG/DSCG, plateformes numeriques et football business.">
+<meta name="author" content="Mohamed Ayari">
+<meta property="og:title" content="Mohamed Ayari — Analyser. Structurer. Developper.">
+<meta property="og:description" content="Expert en gestion et finance, entrepreneur digital, agent FIFA. Au croisement de la finance, de la formation, du digital et du football professionnel.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ayari.pro">
+<link rel="canonical" href="https://ayari.pro">
 <style>
-:root{
-  --bg:#F8F7F4;--bg2:#EFECE6;--card:rgba(255,255,255,.7);--card-h:rgba(255,255,255,.92);
-  --cb:rgba(0,0,0,.06);--fg:#0A0A0C;--fg2:#555249;--fg3:#8E8B82;
-  --accent:#0D1B2A;--accent-l:#1B3A5C;--gold:#B8862D;--gold-l:#D4A23A;
-  --glow:rgba(13,27,42,.08);--grain:.035;
-  --cat-edu:#2563EB;--cat-fin:#059669;--cat-leg:#7C3AED;
-  --cat-cul:#DC2626;--cat-mus:#D97706;--cat-mkt:#DB2777;
-  --cat-reg:#6B7280;--cat-spo:#059669;
-  --f-d:Georgia,"Palatino Linotype","Book Antiqua",Palatino,serif;
-  --f-s:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --f-m:ui-monospace,"Cascadia Code","SF Mono",Consolas,monospace;
-  --mw:1200px;--gut:clamp(1.5rem,5vw,3rem)
+:root {
+  --bg: #FAFAF8;
+  --bg2: #F1F0EC;
+  --card: #FFFFFF;
+  --fg: #111113;
+  --fg2: #4A4A48;
+  --fg3: #8A8A86;
+  --navy: #0F2B4C;
+  --navy-l: #1A4068;
+  --navy-xl: #2D5F8A;
+  --gold: #B8862D;
+  --gold-l: #D4A23A;
+  --gold-d: #8A6420;
+  --border: #E4E1D9;
+  --border-l: #EDEBE5;
+  --tag-bg: #F0EDE5;
+  --tag-fg: #5C5A53;
+  --accent-edu: #2563EB;
+  --accent-fin: #059669;
+  --accent-leg: #7C3AED;
+  --accent-cul: #DC2626;
+  --accent-mus: #D97706;
+  --accent-spo: #047857;
+  --accent-mkt: #DB2777;
+  --accent-reg: #6B7280;
+  --shadow: 0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.04);
+  --shadow-l: 0 8px 40px rgba(0,0,0,.08);
+  --f-d: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  --f-s: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-m: ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace;
+  --mw: 1100px;
+  --gut: clamp(1.25rem, 4vw, 2.5rem);
+  --r: 12px;
 }
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#060A13;--bg2:#0D1119;--card:rgba(14,18,28,.55);--card-h:rgba(20,25,40,.8);
-  --cb:rgba(255,255,255,.06);--fg:#EEEEE8;--fg2:#9A9890;--fg3:#5E5D58;
-  --accent:#7BB5E8;--accent-l:#A5D0F5;--gold:#D4A23A;--gold-l:#E8BC5A;
-  --glow:rgba(123,181,232,.06);--grain:.022
+
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #090D14;
+  --bg2: #0F1319;
+  --card: #13161D;
+  --fg: #EAEAE5;
+  --fg2: #A0A09C;
+  --fg3: #5E5D58;
+  --navy: #5B9BD5;
+  --navy-l: #7BB5E8;
+  --navy-xl: #9CCAEF;
+  --gold: #D4A23A;
+  --gold-l: #E8BC5A;
+  --gold-d: #B8862D;
+  --border: #1E2230;
+  --border-l: #171B24;
+  --tag-bg: #1A1D24;
+  --tag-fg: #9E9D97;
+  --shadow: 0 1px 3px rgba(0,0,0,.15), 0 4px 16px rgba(0,0,0,.15);
+  --shadow-l: 0 8px 40px rgba(0,0,0,.3);
 }}
-:root[data-theme="dark"]{
-  --bg:#060A13;--bg2:#0D1119;--card:rgba(14,18,28,.55);--card-h:rgba(20,25,40,.8);
-  --cb:rgba(255,255,255,.06);--fg:#EEEEE8;--fg2:#9A9890;--fg3:#5E5D58;
-  --accent:#7BB5E8;--accent-l:#A5D0F5;--gold:#D4A23A;--gold-l:#E8BC5A;
-  --glow:rgba(123,181,232,.06);--grain:.022
+:root[data-theme="dark"] {
+  --bg: #090D14;--bg2: #0F1319;--card: #13161D;--fg: #EAEAE5;--fg2: #A0A09C;--fg3: #5E5D58;
+  --navy: #5B9BD5;--navy-l: #7BB5E8;--navy-xl: #9CCAEF;
+  --gold: #D4A23A;--gold-l: #E8BC5A;--gold-d: #B8862D;
+  --border: #1E2230;--border-l: #171B24;--tag-bg: #1A1D24;--tag-fg: #9E9D97;
+  --shadow: 0 1px 3px rgba(0,0,0,.15), 0 4px 16px rgba(0,0,0,.15);
+  --shadow-l: 0 8px 40px rgba(0,0,0,.3);
 }
-:root[data-theme="light"]{
-  --bg:#F8F7F4;--bg2:#EFECE6;--card:rgba(255,255,255,.7);--card-h:rgba(255,255,255,.92);
-  --cb:rgba(0,0,0,.06);--fg:#0A0A0C;--fg2:#555249;--fg3:#8E8B82;
-  --accent:#0D1B2A;--accent-l:#1B3A5C;--gold:#B8862D;--gold-l:#D4A23A;
-  --glow:rgba(13,27,42,.08);--grain:.035
+:root[data-theme="light"] {
+  --bg: #FAFAF8;--bg2: #F1F0EC;--card: #FFFFFF;--fg: #111113;--fg2: #4A4A48;--fg3: #8A8A86;
+  --navy: #0F2B4C;--navy-l: #1A4068;--navy-xl: #2D5F8A;
+  --gold: #B8862D;--gold-l: #D4A23A;--gold-d: #8A6420;
+  --border: #E4E1D9;--border-l: #EDEBE5;--tag-bg: #F0EDE5;--tag-fg: #5C5A53;
+  --shadow: 0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.04);
+  --shadow-l: 0 8px 40px rgba(0,0,0,.08);
 }
 
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--f-s);font-size:1rem;line-height:1.65;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:var(--grain);background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-repeat:repeat;background-size:128px 128px}
-a{color:var(--accent);text-decoration:none;transition:color .2s}
-a:hover{color:var(--accent-l)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
-::selection{background:var(--accent);color:#fff}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--f-s); font-size: 1rem; line-height: 1.7; color: var(--fg); background: var(--bg); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: var(--navy); text-decoration: none; transition: color .2s; }
+a:hover { color: var(--navy-l); }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 3px; }
+::selection { background: var(--navy); color: #fff; }
+img { max-width: 100%; display: block; }
 
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;transform:translateY(-100%);transition:transform .45s cubic-bezier(.16,1,.3,1)}
-.nav.show{transform:translateY(0)}
-.nav-in{max-width:var(--mw);margin:0 auto;padding:0 var(--gut);height:3.4rem;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(24px) saturate(1.8);-webkit-backdrop-filter:blur(24px) saturate(1.8);background:color-mix(in srgb,var(--bg) 75%,transparent);border-bottom:1px solid var(--cb)}
+.wrap { max-width: var(--mw); margin: 0 auto; padding: 0 var(--gut); }
 
-.topbar{position:absolute;top:0;left:0;right:0;z-index:10;max-width:var(--mw);margin:0 auto;padding:1.8rem var(--gut) 0;display:flex;justify-content:space-between;align-items:center}
-.mark{font-family:var(--f-m);font-size:.85rem;color:var(--fg3);letter-spacing:.04em;transition:color .2s}
-.mark:hover{color:var(--fg)}
-.tog{appearance:none;border:1px solid var(--cb);background:color-mix(in srgb,var(--bg) 50%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--fg2);font-family:var(--f-m);font-size:.72rem;padding:.35em .85em;border-radius:100px;cursor:pointer;transition:all .25s}
-.tog:hover{border-color:var(--accent);color:var(--fg);box-shadow:0 0 24px var(--glow)}
+/* ─── NAV ─── */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: transparent; transition: background .3s, box-shadow .3s, backdrop-filter .3s; }
+.nav.scrolled { background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 1px 0 var(--border); }
+.nav-inner { max-width: var(--mw); margin: 0 auto; padding: 0 var(--gut); display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.nav-mark { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.nav-mono { width: 32px; height: 32px; flex-shrink: 0; }
+.nav-mono-letter { font-family: var(--f-d); font-size: 18px; font-weight: 400; fill: var(--gold); }
+.nav-name { font-family: var(--f-m); font-size: .78rem; color: var(--fg3); letter-spacing: .05em; text-transform: uppercase; }
+.nav-links { display: flex; align-items: center; gap: .2rem; }
+.nav-link { font-family: var(--f-s); font-size: .85rem; color: var(--fg2); padding: .4em .7em; border-radius: 6px; transition: color .2s, background .2s; text-decoration: none; }
+.nav-link:hover { color: var(--fg); background: var(--bg2); }
+.nav-tog { appearance: none; border: 1px solid var(--border); background: transparent; color: var(--fg3); font-family: var(--f-m); font-size: .7rem; padding: .3em .7em; border-radius: 100px; cursor: pointer; transition: all .2s; margin-left: .5rem; }
+.nav-tog:hover { border-color: var(--navy); color: var(--fg); }
+.nav-burger { display: none; appearance: none; border: none; background: none; color: var(--fg2); cursor: pointer; padding: .4em; }
+.nav-burger svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
 
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;overflow:hidden}
-.orb{position:absolute;border-radius:50%;filter:blur(90px);will-change:transform}
-.orb-1{width:55vw;height:55vw;max-width:650px;max-height:650px;background:var(--accent);top:-12%;right:-8%;opacity:.12;animation:f1 22s ease-in-out infinite}
-.orb-2{width:38vw;height:38vw;max-width:450px;max-height:450px;background:var(--gold);bottom:-8%;left:8%;opacity:.1;animation:f2 28s ease-in-out infinite}
-.orb-3{width:28vw;height:28vw;max-width:320px;max-height:320px;background:var(--cat-leg);top:32%;right:22%;opacity:.06;animation:f3 24s ease-in-out infinite}
-@keyframes f1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-35px,25px) scale(1.04)}66%{transform:translate(18px,-18px) scale(.96)}}
-@keyframes f2{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(28px,-35px) scale(1.06)}66%{transform:translate(-18px,18px) scale(.94)}}
-@keyframes f3{0%,100%{transform:translate(0,0)}50%{transform:translate(-25px,35px)}}
-
-.hero-inner{position:relative;z-index:1;max-width:var(--mw);margin:0 auto;padding:0 var(--gut);width:100%}
-.hero h1{font-family:var(--f-d);font-size:clamp(3.5rem,13vw,9rem);font-weight:400;line-height:.9;letter-spacing:-.045em;color:var(--fg)}
-.hero-roles{display:flex;gap:.7rem;margin-top:2.5rem;flex-wrap:wrap}
-.role{font-family:var(--f-s);font-size:.85rem;padding:.5em 1.3em;border-radius:100px;letter-spacing:.01em;font-weight:500;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform .25s}
-.role:hover{transform:translateY(-2px)}
-.role-prof{border:1.5px solid var(--accent);color:var(--accent);background:color-mix(in srgb,var(--accent) 5%,transparent)}
-.role-agent{border:1.5px solid var(--gold);color:var(--gold);background:color-mix(in srgb,var(--gold) 5%,transparent)}
-.role-dev{border:1.5px solid var(--cat-fin);color:var(--cat-fin);background:color-mix(in srgb,var(--cat-fin) 5%,transparent)}
-.hero-desc{margin-top:2rem;max-width:50ch;color:var(--fg2);font-size:1.1rem;line-height:1.8}
-
-.scroll-cue{position:absolute;bottom:2.5rem;left:50%;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--fg3);font-family:var(--f-m);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;transform:translateX(-50%)}
-.scroll-cue span{opacity:.6}
-.scroll-bar{width:1px;height:26px;background:linear-gradient(to bottom,var(--fg3),transparent);animation:sbar 2.2s ease-in-out infinite}
-@keyframes sbar{0%,100%{opacity:.4;transform:scaleY(1)}50%{opacity:.9;transform:scaleY(1.15) translateY(3px)}}
-
-.wrap{max-width:var(--mw);margin:0 auto;padding:0 var(--gut)}
-.divider{height:1px;background:linear-gradient(to right,transparent,var(--cb) 18%,var(--cb) 82%,transparent)}
-
-.sec{padding:6rem 0}
-.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:.5rem}
-.sec-title{font-family:var(--f-d);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:400;letter-spacing:-.02em}
-.sec-count{font-family:var(--f-m);font-size:.72rem;color:var(--fg3);letter-spacing:.04em;padding:.3em .85em;background:var(--bg2);border-radius:100px}
-
-.about{padding:6rem 0 2rem}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
-@media(max-width:700px){.about-grid{grid-template-columns:1fr}}
-.about-block{display:flex;flex-direction:column;gap:.6rem}
-.about-label{font-family:var(--f-m);font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-bottom:.3rem;display:flex;align-items:center;gap:.6rem}
-.about-label::after{content:'';flex:1;height:1px;background:linear-gradient(to right,var(--gold-l),transparent);opacity:.25}
-.about-text{color:var(--fg2);font-size:.95rem;line-height:1.85;max-width:52ch}
-.about-text strong{color:var(--fg);font-weight:600}
-.about-quote{grid-column:1/-1;position:relative;padding:2.5rem 0 2.5rem 2rem;margin:1rem 0}
-.about-quote::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--gold),var(--accent));border-radius:3px}
-.about-quote p{font-family:var(--f-d);font-size:clamp(1.15rem,2.5vw,1.5rem);font-style:italic;color:var(--fg);line-height:1.75;max-width:60ch}
-.about-facts{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.5rem}
-.fact{display:flex;align-items:center;gap:.5em;font-family:var(--f-m);font-size:.78rem;color:var(--fg2);padding:.35em .85em;background:var(--bg2);border-radius:100px;transition:all .2s}
-.fact:hover{color:var(--fg);transform:translateY(-1px)}
-.fact::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0}
-
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-@media(max-width:700px){.grid{grid-template-columns:1fr}}
-
-.card{position:relative;background:var(--card);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border:1px solid var(--cb);border-radius:18px;padding:1.8rem;display:flex;flex-direction:column;gap:.7rem;transition:all .4s cubic-bezier(.16,1,.3,1);overflow:hidden}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--cat,var(--cb));opacity:.65;transition:opacity .3s,height .3s}
-.card::after{content:'';position:absolute;inset:0;border-radius:18px;background:radial-gradient(600px circle at var(--mx,50%) var(--my,0%),var(--glow),transparent 40%);opacity:0;transition:opacity .35s;pointer-events:none}
-@media(prefers-reduced-motion:no-preference){
-  .card{opacity:0;transform:translateY(30px)}
-  .card.vis{opacity:1;transform:translateY(0)}
-  .card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--cat,var(--accent)) 18%,var(--cb));box-shadow:0 22px 70px -18px rgba(0,0,0,.12),0 0 0 1px color-mix(in srgb,var(--cat,var(--accent)) 8%,transparent)}
-  .card:hover::before{opacity:1;height:4px}
-  .card:hover::after{opacity:1}
+@media (max-width: 768px) {
+  .nav-links { position: fixed; top: 64px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); flex-direction: column; padding: 1rem var(--gut); gap: .2rem; transform: translateY(-110%); transition: transform .3s ease; z-index: 99; }
+  .nav-links.open { transform: translateY(0); }
+  .nav-link { width: 100%; padding: .7em .8em; font-size: .95rem; }
+  .nav-burger { display: block; }
+  .nav-tog { margin-left: 0; }
+  .nav-name { display: none; }
 }
-@media(prefers-reduced-motion:reduce){.card{opacity:1;transform:none}}
 
-.card-top{display:flex;justify-content:space-between;align-items:center}
-.domain{font-family:var(--f-m);font-size:.66rem;text-transform:uppercase;letter-spacing:.12em;color:var(--cat,var(--fg3))}
-.badge{font-family:var(--f-m);font-size:.6rem;padding:.25em .7em;border-radius:100px;letter-spacing:.04em;font-weight:500}
-.badge-live{background:#ECFDF5;color:#047857}
-.badge-dev{background:#FEF3C7;color:#92400E}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge-live{background:#052E21;color:#34D399}:root:not([data-theme="light"]) .badge-dev{background:#2A1E06;color:#FCD34D}}
-:root[data-theme="dark"] .badge-live{background:#052E21;color:#34D399}
-:root[data-theme="dark"] .badge-dev{background:#2A1E06;color:#FCD34D}
-:root[data-theme="light"] .badge-live{background:#ECFDF5;color:#047857}
-:root[data-theme="light"] .badge-dev{background:#FEF3C7;color:#92400E}
+/* ─── HERO ─── */
+.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 64px; }
+.hero-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; }
+.hero-bg canvas { width: 100%; height: 100%; }
+.hero-inner { position: relative; z-index: 1; max-width: var(--mw); margin: 0 auto; padding: 0 var(--gut); width: 100%; }
+.hero-top { font-family: var(--f-m); font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; color: var(--gold); margin-bottom: 1.8rem; }
+.hero h1 { font-family: var(--f-d); font-size: clamp(2.8rem, 8vw, 5.5rem); font-weight: 400; line-height: 1.05; letter-spacing: -.025em; color: var(--fg); margin-bottom: 1rem; }
+.hero-baseline { font-family: var(--f-d); font-size: clamp(1.15rem, 2.5vw, 1.5rem); color: var(--gold); font-style: italic; letter-spacing: .01em; margin-bottom: 1.6rem; }
+.hero-sub { font-family: var(--f-s); font-size: clamp(.92rem, 1.5vw, 1.05rem); color: var(--fg2); max-width: 52ch; line-height: 1.8; margin-bottom: 2.2rem; }
+.hero-roles { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.hero-role { font-family: var(--f-s); font-size: .82rem; padding: .4em 1em; border-radius: 100px; font-weight: 500; letter-spacing: .01em; }
+.hr-fin { border: 1.5px solid var(--navy); color: var(--navy); }
+.hr-ens { border: 1.5px solid var(--accent-edu); color: var(--accent-edu); }
+.hr-dig { border: 1.5px solid var(--accent-fin); color: var(--accent-fin); }
+.hr-fifa { border: 1.5px solid var(--gold); color: var(--gold); }
+.hero-ctas { display: flex; gap: .8rem; flex-wrap: wrap; }
+.btn { font-family: var(--f-s); font-size: .9rem; font-weight: 500; padding: .65em 1.6em; border-radius: 8px; display: inline-flex; align-items: center; gap: .4em; transition: all .2s; text-decoration: none; cursor: pointer; border: none; }
+.btn-primary { background: var(--navy); color: #fff; }
+.btn-primary:hover { background: var(--navy-l); color: #fff; }
+.btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--fg); }
+.btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+.btn-gold { background: var(--gold); color: #fff; }
+.btn-gold:hover { background: var(--gold-l); color: #fff; }
 
-.card h3{font-family:var(--f-d);font-size:1.4rem;font-weight:400;line-height:1.25;letter-spacing:-.01em}
-.card h3 a{color:var(--fg);background-image:linear-gradient(var(--cat,var(--accent)),var(--cat,var(--accent)));background-position:0 100%;background-repeat:no-repeat;background-size:0% 1.5px;transition:background-size .35s cubic-bezier(.16,1,.3,1)}
-.card h3 a:hover{background-size:100% 1.5px;color:var(--fg)}
-.card-desc{color:var(--fg2);font-size:.92rem;line-height:1.75;flex:1}
-.card-tags{display:flex;flex-wrap:wrap;gap:.4rem}
-.tag{font-family:var(--f-m);font-size:.64rem;padding:.2em .55em;background:var(--bg2);color:var(--fg3);border-radius:5px;transition:all .2s}
-.card:hover .tag{background:color-mix(in srgb,var(--cat,var(--accent)) 7%,var(--bg2))}
-.card-go{font-family:var(--f-m);font-size:.78rem;color:var(--cat,var(--accent));display:inline-flex;align-items:center;gap:.4em;margin-top:.3rem;transition:gap .25s}
-.card-go:hover{gap:.75em;color:var(--accent-l)}
-
-.stack-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:.6rem}
-.si{font-family:var(--f-m);font-size:.82rem;color:var(--fg2);display:flex;align-items:center;gap:.5em;padding:.6em .9em;background:var(--card);border:1px solid var(--cb);border-radius:10px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:all .3s cubic-bezier(.16,1,.3,1)}
-.si:hover{color:var(--fg);transform:translateY(-2px);border-color:var(--gold);box-shadow:0 10px 35px -10px var(--glow)}
-.si::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
-
-footer{position:relative;max-width:var(--mw);margin:0 auto;padding:3rem var(--gut) 2.5rem}
-footer::before{content:'';position:absolute;top:0;left:var(--gut);right:var(--gut);height:1px;background:linear-gradient(to right,transparent,var(--gold) 20%,var(--accent) 80%,transparent);opacity:.25}
-.flinks{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;font-family:var(--f-m);font-size:.85rem}
-.fsep{color:var(--fg3);opacity:.35}
-.flinks span{color:var(--fg2)}
-.fcopy{margin-top:.8rem;font-size:.75rem;color:var(--fg3);letter-spacing:.02em}
-
-@media(prefers-reduced-motion:no-preference){
-  .hero h1{animation:rise .8s cubic-bezier(.16,1,.3,1) both}
-  .hero-roles{animation:rise .8s cubic-bezier(.16,1,.3,1) .12s both}
-  .hero-desc{animation:rise .8s cubic-bezier(.16,1,.3,1) .22s both}
-  .scroll-cue{animation:rise .8s cubic-bezier(.16,1,.3,1) .4s both}
-  .about-grid>*{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
-  .about-grid>*.vis{opacity:1;transform:translateY(0)}
-  @keyframes rise{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1 { animation: fadeUp .7s ease both; }
+  .hero-baseline { animation: fadeUp .7s ease .08s both; }
+  .hero-sub { animation: fadeUp .7s ease .14s both; }
+  .hero-roles { animation: fadeUp .7s ease .2s both; }
+  .hero-ctas { animation: fadeUp .7s ease .26s both; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 }
-@media(prefers-reduced-motion:reduce){.orb{animation:none!important}.scroll-cue{animation:none!important;opacity:.5}}
-@media(max-width:700px){.hero{min-height:88vh}.orb{opacity:.06!important}.stack-grid{grid-template-columns:repeat(2,1fr)}.scroll-cue{display:none}}
+
+/* ─── SECTIONS ─── */
+.sec { padding: 6rem 0; }
+.sec-alt { background: var(--bg2); }
+.sec-head { margin-bottom: 3rem; }
+.sec-label { font-family: var(--f-m); font-size: .7rem; text-transform: uppercase; letter-spacing: .15em; color: var(--gold); margin-bottom: .6rem; }
+.sec-title { font-family: var(--f-d); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 400; letter-spacing: -.01em; color: var(--fg); line-height: 1.2; }
+.sec-desc { color: var(--fg2); font-size: .98rem; line-height: 1.8; max-width: 60ch; margin-top: .8rem; }
+.sec-divider { height: 1px; background: var(--border); }
+
+/* ─── ABOUT ─── */
+.about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+@media (max-width: 768px) { .about-content { grid-template-columns: 1fr; gap: 2rem; } }
+.about-text { color: var(--fg2); font-size: .95rem; line-height: 1.85; }
+.about-text strong { color: var(--fg); font-weight: 600; }
+.about-text p + p { margin-top: 1rem; }
+.about-quote { border-left: 3px solid var(--gold); padding-left: 1.3rem; margin-top: 1.5rem; }
+.about-quote p { font-family: var(--f-d); font-size: 1.05rem; font-style: italic; color: var(--fg); line-height: 1.7; }
+.about-facts { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+.about-fact { display: flex; align-items: center; gap: .5em; font-family: var(--f-m); font-size: .8rem; color: var(--fg2); }
+.about-fact::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+/* ─── PILLARS ─── */
+.pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 900px) { .pillars { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .pillars { grid-template-columns: 1fr; } }
+.pillar { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 1.8rem 1.5rem; display: flex; flex-direction: column; gap: .8rem; transition: transform .25s, box-shadow .25s; position: relative; overflow: hidden; }
+.pillar::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--p-color, var(--gold)); }
+.pillar:hover { transform: translateY(-3px); box-shadow: var(--shadow-l); }
+.pillar-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--p-color, var(--gold)) 10%, transparent); }
+.pillar-icon svg { width: 22px; height: 22px; stroke: var(--p-color, var(--gold)); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.pillar h3 { font-family: var(--f-d); font-size: 1.1rem; font-weight: 400; color: var(--fg); line-height: 1.3; }
+.pillar p { font-size: .88rem; color: var(--fg2); line-height: 1.7; flex: 1; }
+.pillar-link { font-family: var(--f-m); font-size: .78rem; color: var(--p-color, var(--navy)); display: inline-flex; align-items: center; gap: .3em; margin-top: auto; }
+.pillar-link:hover { color: var(--navy-l); }
+.pillar-link .arr { transition: transform .15s; }
+.pillar-link:hover .arr { transform: translateX(3px); }
+
+/* ─── EXPERTISE ─── */
+.expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+@media (max-width: 768px) { .expertise-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .expertise-grid { grid-template-columns: 1fr; } }
+.expertise-item { padding: 1.4rem; border: 1px solid var(--border); border-radius: var(--r); background: var(--card); transition: border-color .2s; }
+.expertise-item:hover { border-color: var(--gold); }
+.expertise-item h4 { font-family: var(--f-d); font-size: .98rem; font-weight: 400; color: var(--fg); margin-bottom: .5rem; }
+.expertise-item p { font-size: .84rem; color: var(--fg3); line-height: 1.6; }
+
+/* ─── FORMATION ─── */
+.formation-content { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: start; }
+@media (max-width: 768px) { .formation-content { grid-template-columns: 1fr; gap: 2rem; } }
+.formation-text { color: var(--fg2); font-size: .95rem; line-height: 1.85; }
+.formation-text p + p { margin-top: 1rem; }
+.formation-highlight { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 2rem; }
+.formation-highlight h4 { font-family: var(--f-d); font-size: 1.1rem; color: var(--fg); margin-bottom: 1rem; }
+.formation-stat { display: flex; align-items: baseline; gap: .6rem; padding: .7rem 0; border-bottom: 1px solid var(--border-l); }
+.formation-stat:last-child { border-bottom: none; }
+.formation-stat strong { font-family: var(--f-d); font-size: 1.6rem; color: var(--navy); font-weight: 400; min-width: 3ch; }
+.formation-stat span { font-size: .9rem; color: var(--fg2); }
+
+/* ─── PROJECTS ─── */
+.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+@media (max-width: 700px) { .projects-grid { grid-template-columns: 1fr; } }
+.project { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 1.6rem; border-top: 3px solid var(--p-cat, var(--border)); display: flex; flex-direction: column; gap: .5rem; transition: transform .25s, box-shadow .25s; }
+.project:hover { transform: translateY(-3px); box-shadow: var(--shadow-l); }
+.project-top { display: flex; justify-content: space-between; align-items: center; }
+.project-cat { font-family: var(--f-m); font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--p-cat, var(--fg3)); }
+.project-badge { font-family: var(--f-m); font-size: .63rem; padding: .2em .55em; border-radius: 100px; letter-spacing: .03em; }
+.pb-live { background: #ECFDF5; color: #047857; }
+.pb-dev { background: #FEF3C7; color: #92400E; }
+:root[data-theme="dark"] .pb-live, .dark-badges .pb-live { background: #052E21; color: #34D399; }
+:root[data-theme="dark"] .pb-dev, .dark-badges .pb-dev { background: #2A1E06; color: #FCD34D; }
+@media (prefers-color-scheme: dark) { .pb-live { background: #052E21; color: #34D399; } .pb-dev { background: #2A1E06; color: #FCD34D; } }
+:root[data-theme="light"] .pb-live { background: #ECFDF5; color: #047857; }
+:root[data-theme="light"] .pb-dev { background: #FEF3C7; color: #92400E; }
+.project h3 { font-family: var(--f-d); font-size: 1.25rem; font-weight: 400; line-height: 1.3; }
+.project h3 a { color: var(--fg); border-bottom: 1px solid transparent; transition: border-color .2s; text-decoration: none; }
+.project h3 a:hover { border-bottom-color: var(--p-cat, var(--navy)); color: var(--fg); }
+.project-desc { color: var(--fg2); font-size: .9rem; line-height: 1.7; flex: 1; }
+.project-tags { display: flex; flex-wrap: wrap; gap: .3rem; }
+.ptag { font-family: var(--f-m); font-size: .66rem; padding: .15em .5em; background: var(--tag-bg); color: var(--tag-fg); border-radius: 3px; }
+.project-link { font-family: var(--f-m); font-size: .78rem; color: var(--p-cat, var(--navy)); display: inline-flex; align-items: center; gap: .3em; margin-top: .3rem; text-decoration: none; }
+.project-link:hover { color: var(--navy-l); }
+.project-link .arr { transition: transform .15s; display: inline-block; }
+.project-link:hover .arr { transform: translateX(3px); }
+
+/* ─── FIFA ─── */
+.fifa-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+@media (max-width: 768px) { .fifa-content { grid-template-columns: 1fr; } }
+.fifa-text { color: var(--fg2); font-size: .95rem; line-height: 1.85; }
+.fifa-text p + p { margin-top: 1rem; }
+.fifa-services { list-style: none; display: flex; flex-direction: column; gap: .6rem; margin-top: 1.5rem; }
+.fifa-services li { display: flex; align-items: flex-start; gap: .6rem; font-size: .9rem; color: var(--fg2); }
+.fifa-services li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: .55em; }
+.fifa-ctas { display: flex; flex-direction: column; gap: .8rem; margin-top: 1.5rem; }
+.fifa-cta { display: flex; align-items: center; gap: .8rem; padding: 1rem 1.3rem; border: 1px solid var(--border); border-radius: var(--r); transition: all .2s; text-decoration: none; color: var(--fg); }
+.fifa-cta:hover { border-color: var(--gold); background: color-mix(in srgb, var(--gold) 5%, transparent); color: var(--fg); }
+.fifa-cta-icon { width: 40px; height: 40px; border-radius: 8px; background: color-mix(in srgb, var(--gold) 10%, transparent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.fifa-cta-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.fifa-cta-text strong { display: block; font-size: .9rem; font-weight: 600; color: var(--fg); }
+.fifa-cta-text span { font-size: .8rem; color: var(--fg3); }
+.fifa-zones { margin-top: 1.5rem; }
+.fifa-zones-label { font-family: var(--f-m); font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; color: var(--gold); margin-bottom: .5rem; }
+.fifa-zones-list { display: flex; flex-wrap: wrap; gap: .4rem; }
+.fifa-zone { font-size: .82rem; color: var(--fg2); padding: .3em .7em; background: var(--tag-bg); border-radius: 4px; }
+
+/* ─── CONTACT ─── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 2rem; } }
+.contact-reasons { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+.contact-reasons li { display: flex; align-items: center; gap: .5rem; font-size: .92rem; color: var(--fg2); padding: .5em 0; border-bottom: 1px solid var(--border-l); }
+.contact-reasons li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--navy); flex-shrink: 0; }
+.contact-channels { display: flex; flex-direction: column; gap: 1rem; }
+.contact-card { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--r); transition: all .2s; text-decoration: none; color: var(--fg); }
+.contact-card:hover { border-color: var(--navy); box-shadow: var(--shadow); color: var(--fg); }
+.contact-card svg { width: 22px; height: 22px; fill: var(--navy); flex-shrink: 0; }
+.contact-card-info { display: flex; flex-direction: column; }
+.contact-card-label { font-family: var(--f-m); font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--fg3); }
+.contact-card-val { font-size: .95rem; color: var(--fg); }
+
+/* ─── FOOTER ─── */
+footer { border-top: 1px solid var(--border); padding: 3rem 0; }
+.footer-inner { max-width: var(--mw); margin: 0 auto; padding: 0 var(--gut); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: .8rem; color: var(--fg3); }
+.footer-links { display: flex; gap: 1rem; align-items: center; }
+.footer-link { color: var(--fg3); transition: color .2s; }
+.footer-link:hover { color: var(--fg); }
+.footer-link svg { width: 20px; height: 20px; fill: currentColor; }
+
+/* ─── ANIMATIONS ─── */
+@media (prefers-reduced-motion: no-preference) {
+  .anim { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+  .anim.vis { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .anim { opacity: 1; transform: none; }
+}
 </style>
+</head>
+<body>
 
-<nav class="nav" id="nav" aria-label="Navigation principale">
-  <div class="nav-in">
-    <a href="#" class="mark" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">ayari.pro</a>
-    <button class="tog" id="tog2" aria-label="Changer de theme"></button>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-mark" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">
+      <svg class="nav-mono" viewBox="0 0 32 32" fill="none">
+        <rect x="1" y="1" width="30" height="30" rx="6" stroke="var(--border)" stroke-width="1"/>
+        <text class="nav-mono-letter" x="16" y="22" text-anchor="middle">AY</text>
+      </svg>
+      <span class="nav-name">ayari.pro</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link">Profil</a>
+      <a href="#expertise" class="nav-link">Expertise</a>
+      <a href="#projets" class="nav-link">Projets</a>
+      <a href="#fifa" class="nav-link">FIFA</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <button class="nav-tog" id="tog" aria-label="Changer de theme">Sombre</button>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
   </div>
 </nav>
 
-<header class="topbar">
-  <a href="#" class="mark" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">ayari.pro</a>
-  <button class="tog" id="tog" aria-label="Changer de theme">Sombre</button>
-</header>
-
-<section class="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"><canvas id="geo"></canvas></div>
   <div class="hero-inner">
+    <p class="hero-top">Finance &middot; Formation &middot; Digital &middot; Football Business</p>
     <h1>Mohamed<br>Ayari</h1>
+    <p class="hero-baseline">Analyser. Structurer. D&eacute;velopper.</p>
+    <p class="hero-sub">Au croisement de la finance, de la formation, du digital et du football professionnel. Transformer l'expertise en solutions concr&egrave;tes &mdash; dans une salle de cours, un conseil d'administration ou un vestiaire.</p>
     <div class="hero-roles">
-      <span class="role role-prof">Professeur de controle de gestion</span>
-      <span class="role role-agent">Agent FIFA</span>
-      <span class="role role-dev">Developpeur full-stack</span>
+      <span class="hero-role hr-fin">Finance &amp; Gestion</span>
+      <span class="hero-role hr-ens">Formation &amp; Transmission</span>
+      <span class="hero-role hr-dig">Digital &amp; Entrepreneuriat</span>
+      <span class="hero-role hr-fifa">Agent FIFA</span>
     </div>
-    <p class="hero-desc">Des grilles de lecture pour rendre accessible ce qui est complexe&nbsp;&mdash; dans un amphitheatre, sur un terrain, ou derriere un ecran.</p>
-  </div>
-  <div class="scroll-cue" aria-hidden="true">
-    <span>Decouvrir</span>
-    <div class="scroll-bar"></div>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">Me contacter</a>
+      <a href="#projets" class="btn btn-outline">Voir les projets</a>
+    </div>
   </div>
 </section>
 
-<div class="wrap">
-  <div class="divider"></div>
+<div class="sec-divider"></div>
 
-  <section class="about">
-    <div class="sec-head">
-      <h2 class="sec-title">A propos</h2>
+<!-- A PROPOS -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head anim">
+      <p class="sec-label">Profil</p>
+      <h2 class="sec-title">&Agrave; propos</h2>
+      <p class="sec-desc">Le parcours ne se lit pas comme un CV. Il se comprend comme une logique.</p>
     </div>
-    <div class="about-grid">
-      <div class="about-block">
-        <p class="about-label">Parcours</p>
-        <p class="about-text">Ne a <strong>Tunis</strong>, DEA de Sciences de gestion a l'<strong>IAE de Nice</strong>, ecole doctorale, recherche sur la gouvernance et la qualite de l'information financiere. Enseignant a <strong>Polytech Sophia Antipolis</strong>, a l'<strong>Institut Saint Joseph</strong> et au <strong>lycee hotelier Anne-Sophie Pic</strong>, puis professeur de gestion appliquee au <strong>lycee hotelier de Montargis</strong>. Depuis 2019 au <strong>campus La Salle, Lille</strong>&nbsp;&mdash; finance, comptabilite et controle de gestion en <strong>BTS CG, DCG et DSCG</strong>. Expertise forgee dans le <strong>numerique educatif</strong>, desormais tournee vers l'<strong>IA au service des apprentissages</strong>.</p>
+    <div class="about-content">
+      <div class="anim">
+        <div class="about-text">
+          <p>Form&eacute; &agrave; l'<strong>IAE de Nice</strong> en sciences de gestion, sp&eacute;cialis&eacute; dans la gouvernance et la qualit&eacute; de l'information financi&egrave;re, Mohamed Ayari enseigne aujourd'hui le contr&ocirc;le de gestion et la communication professionnelle en <strong>DCG et DSCG</strong> au <strong>campus La Salle &agrave; Lille</strong>.</p>
+          <p>En parall&egrave;le, il d&eacute;veloppe des plateformes num&eacute;riques &mdash; de l'optimisation fiscale des dirigeants &agrave; la p&eacute;dagogie du DCG &mdash; et accompagne joueurs et clubs de football en tant qu'<strong>agent FIFA</strong>.</p>
+          <p>Ce qui relie ces activit&eacute;s : une m&ecirc;me m&eacute;thode. Comprendre un probl&egrave;me, le structurer, construire une solution. Que le terrain soit une entreprise, une salle de cours, un &eacute;cran ou un stade.</p>
+        </div>
+        <div class="about-quote">
+          <p>&laquo;&nbsp;Trouver des grilles de lecture qui rendent accessibles les probl&eacute;matiques les plus complexes et faire &eacute;merger le besoin de savoir et d'apprendre.&nbsp;&raquo;</p>
+        </div>
       </div>
-      <div class="about-block">
-        <p class="about-label">Agent FIFA</p>
-        <p class="about-text">Examen d'agent FIFA obtenu en <strong>novembre 2024</strong>. Une seconde carriere qui prolonge naturellement la maitrise de la gestion, de la negociation et de l'analyse financiere appliquees au monde du football professionnel.</p>
-      </div>
-      <div class="about-quote">
-        <p>Trouver des grilles de lecture qui rendent accessibles les problematiques les plus complexes et faire emerger le besoin de savoir et d'apprendre.</p>
-      </div>
-      <div class="about-block">
-        <p class="about-label">Et aussi</p>
+      <div class="anim" style="transition-delay:.1s">
+        <div class="about-text">
+          <p><strong>Parcours</strong> : N&eacute; &agrave; Tunis, lyc&eacute;e h&ocirc;telier &agrave; Montargis, DEA &agrave; Nice, campus La Salle &agrave; Lille. Un itin&eacute;raire qui traverse la M&eacute;diterran&eacute;e, la recherche et l'enseignement.</p>
+          <p><strong>Expertise</strong> : Num&eacute;rique &eacute;ducatif, intelligence artificielle au service des apprentissages, conception de plateformes SaaS (EdTech, FinTech, LegalTech).</p>
+          <p><strong>Agent FIFA</strong> : Examen obtenu en novembre 2024. Une seconde carri&egrave;re qui prolonge naturellement la ma&icirc;trise de la gestion, de la n&eacute;gociation et de l'analyse financi&egrave;re appliqu&eacute;es au football professionnel.</p>
+        </div>
         <div class="about-facts">
-          <span class="fact">55 ans</span>
-          <span class="fact">Tunis &rarr; Montargis &rarr; Nice &rarr; Lille</span>
-          <span class="fact">Football</span>
-          <span class="fact">Basket</span>
-          <span class="fact">Tennis</span>
-          <span class="fact">Developpeur autodidacte</span>
+          <span class="about-fact">55 ans</span>
+          <span class="about-fact">Tunis &rarr; Montargis &rarr; Nice &rarr; Lille</span>
+          <span class="about-fact">DEA Sciences de gestion</span>
+          <span class="about-fact">Football</span>
+          <span class="about-fact">Basket</span>
+          <span class="about-fact">Tennis</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="divider"></div>
-
-  <section class="sec">
-    <div class="sec-head">
-      <h2 class="sec-title">Realisations</h2>
-      <span class="sec-count">6 projets en ligne</span>
+<!-- PILIERS -->
+<section class="sec sec-alt" id="piliers">
+  <div class="wrap">
+    <div class="sec-head anim">
+      <p class="sec-label">Quatre piliers</p>
+      <h2 class="sec-title">Un profil &agrave; intersections</h2>
+      <p class="sec-desc">L&agrave; o&ugrave; d'autres s&eacute;parent finance, enseignement, digital et sport, Mohamed Ayari les connecte.</p>
     </div>
-    <div class="grid">
+    <div class="pillars">
+      <div class="pillar anim" style="--p-color: var(--navy)">
+        <div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <h3>Finance &amp; Management</h3>
+        <p>Contr&ocirc;le de gestion, pilotage de la performance, analyse financi&egrave;re, aide &agrave; la d&eacute;cision. L'expertise qui structure toutes les autres.</p>
+        <a href="#expertise" class="pillar-link">En savoir plus <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="pillar anim" style="--p-color: var(--accent-edu); transition-delay:.06s">
+        <div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+        <h3>Formation &amp; Transmission</h3>
+        <p>DCG, DSCG, contr&ocirc;le de gestion, finance. Enseigner, c'est rendre accessible ce qui est complexe &mdash; en amphi comme sur une plateforme.</p>
+        <a href="#formation" class="pillar-link">D&eacute;couvrir <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="pillar anim" style="--p-color: var(--accent-fin); transition-delay:.12s">
+        <div class="pillar-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Digital, IA &amp; Entrepreneuriat</h3>
+        <p>Plateformes SaaS, EdTech, FinTech, LegalTech, intelligence artificielle. Transformer l'expertise m&eacute;tier en produits num&eacute;riques.</p>
+        <a href="#projets" class="pillar-link">Voir les projets <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="pillar anim" style="--p-color: var(--gold); transition-delay:.18s">
+        <div class="pillar-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg></div>
+        <h3>Football Business &amp; FIFA</h3>
+        <p>Agent de joueurs licence FIFA. Recrutement, scouting, d&eacute;veloppement de carri&egrave;re, strat&eacute;gie de clubs.</p>
+        <a href="#fifa" class="pillar-link">En savoir plus <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <article class="card" style="--cat:var(--cat-edu)">
-        <div class="card-top">
-          <span class="domain">Edtech</span>
-          <span class="badge badge-live">En ligne</span>
+<!-- EXPERTISE -->
+<section class="sec" id="expertise">
+  <div class="wrap">
+    <div class="sec-head anim">
+      <p class="sec-label">Comp&eacute;tences</p>
+      <h2 class="sec-title">Domaines d'expertise</h2>
+      <p class="sec-desc">Une approche transversale au service de la d&eacute;cision.</p>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-item anim">
+        <h4>Finance &amp; Contr&ocirc;le de gestion</h4>
+        <p>Budgets, tableaux de bord, analyse des &eacute;carts, pilotage de la performance, comptabilit&eacute; analytique.</p>
+      </div>
+      <div class="expertise-item anim" style="transition-delay:.04s">
+        <h4>Comptabilit&eacute;</h4>
+        <p>Comptabilit&eacute; financi&egrave;re, comptabilit&eacute; de gestion, normes comptables, analyse des &eacute;tats financiers.</p>
+      </div>
+      <div class="expertise-item anim" style="transition-delay:.08s">
+        <h4>Management &amp; Strat&eacute;gie</h4>
+        <p>Strat&eacute;gie d'entreprise, analyse concurrentielle, aide &agrave; la d&eacute;cision, gouvernance.</p>
+      </div>
+      <div class="expertise-item anim" style="transition-delay:.12s">
+        <h4>Formation</h4>
+        <p>P&eacute;dagogie, ing&eacute;nierie de formation, conception de ressources, EdTech, &eacute;valuation.</p>
+      </div>
+      <div class="expertise-item anim" style="transition-delay:.16s">
+        <h4>Digital &amp; IA</h4>
+        <p>Plateformes SaaS, automatisation, IA appliqu&eacute;e, transformation digitale, d&eacute;veloppement web.</p>
+      </div>
+      <div class="expertise-item anim" style="transition-delay:.2s">
+        <h4>Football Business</h4>
+        <p>Transferts, contrats, scouting, d&eacute;veloppement de carri&egrave;re, &eacute;conomie du football, structuration de clubs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- FORMATION -->
+<section class="sec" id="formation">
+  <div class="wrap">
+    <div class="sec-head anim">
+      <p class="sec-label">Enseignement</p>
+      <h2 class="sec-title">Former, transmettre, outiller</h2>
+      <p class="sec-desc">L'enseignement comme levier de d&eacute;veloppement.</p>
+    </div>
+    <div class="formation-content">
+      <div class="formation-text anim">
+        <p>Professeur au <strong>campus La Salle &agrave; Lille</strong>, j'enseigne le contr&ocirc;le de gestion et la communication professionnelle aux &eacute;tudiants en DCG et DSCG.</p>
+        <p>Ma conviction : les probl&eacute;matiques les plus complexes deviennent accessibles quand on trouve la bonne grille de lecture. C'est cette approche que j'applique en cours comme dans la conception de mes plateformes p&eacute;dagogiques.</p>
+        <p>Aujourd'hui, je travaille &agrave; mettre l'<strong>intelligence artificielle au service des apprentissages</strong> &mdash; pour personnaliser les parcours, enrichir les ressources et rendre l'&eacute;tudiant acteur de sa progression.</p>
+        <div style="margin-top:1.5rem">
+          <a href="https://www.objectif-dcg.fr" target="_blank" rel="noopener" class="btn btn-outline">D&eacute;couvrir Objectif-DCG.fr <span style="margin-left:.3em">&rarr;</span></a>
+        </div>
+      </div>
+      <div class="formation-highlight anim" style="transition-delay:.1s">
+        <h4>Objectif-DCG.fr en chiffres</h4>
+        <div class="formation-stat"><strong>28</strong><span>chapitres structur&eacute;s</span></div>
+        <div class="formation-stat"><strong>7</strong><span>onglets par chapitre</span></div>
+        <div class="formation-stat"><strong>482</strong><span>QCM interactifs</span></div>
+        <div class="formation-stat"><strong>131</strong><span>exercices corrig&eacute;s</span></div>
+        <div class="formation-stat"><strong>2025</strong><span>programme r&eacute;nov&eacute;</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- PROJETS -->
+<section class="sec" id="projets">
+  <div class="wrap">
+    <div class="sec-head anim">
+      <p class="sec-label">R&eacute;alisations</p>
+      <h2 class="sec-title">Construire des solutions</h2>
+      <p class="sec-desc">De l'expertise m&eacute;tier au produit num&eacute;rique. Chaque projet na&icirc;t d'un besoin r&eacute;el.</p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project anim" style="--p-cat: var(--accent-edu)">
+        <div class="project-top">
+          <span class="project-cat">EdTech</span>
+          <span class="project-badge pb-live">En ligne</span>
         </div>
         <h3><a href="https://www.objectif-dcg.fr" target="_blank" rel="noopener">Objectif-DCG.fr</a></h3>
-        <p class="card-desc">Plateforme pedagogique pour le DCG et le DSCG. 28&nbsp;chapitres, 7&nbsp;onglets par chapitre, 482&nbsp;QCM, 131&nbsp;exercices. Programme renove 2025.</p>
-        <div class="card-tags">
-          <span class="tag">Next.js 16</span><span class="tag">Prisma 7</span><span class="tag">Neon</span><span class="tag">Tailwind 4</span>
+        <p class="project-desc">Plateforme p&eacute;dagogique pour le DCG et le DSCG. 28&nbsp;chapitres, 7&nbsp;onglets par chapitre, 482&nbsp;QCM, 131&nbsp;exercices. Programme r&eacute;nov&eacute; 2025.</p>
+        <div class="project-tags">
+          <span class="ptag">Next.js 16</span><span class="ptag">Prisma 7</span><span class="ptag">Neon</span><span class="ptag">Tailwind 4</span>
         </div>
-        <a class="card-go" href="https://www.objectif-dcg.fr" target="_blank" rel="noopener">objectif-dcg.fr <span>&rarr;</span></a>
+        <a class="project-link" href="https://www.objectif-dcg.fr" target="_blank" rel="noopener">objectif-dcg.fr <span class="arr">&rarr;</span></a>
       </article>
 
-      <article class="card" style="--cat:var(--cat-fin)">
-        <div class="card-top">
-          <span class="domain">Fintech</span>
-          <span class="badge badge-live">En ligne</span>
+      <article class="project anim" style="--p-cat: var(--accent-fin); transition-delay:.06s">
+        <div class="project-top">
+          <span class="project-cat">FinTech</span>
+          <span class="project-badge pb-live">En ligne</span>
         </div>
         <h3>Plateforme Optimus</h3>
-        <p class="card-desc">Deux SaaS d'optimisation de remuneration. <strong>Dirigeant Optimizer</strong>&nbsp;: simulation IR/IS/TNS, 5&nbsp;scenarios, scoring IA, rapport PDF. <strong>Optimus Liberal</strong>&nbsp;: comparateur de 6&nbsp;structures juridiques.</p>
-        <div class="card-tags">
-          <span class="tag">Next.js 15</span><span class="tag">Prisma 7</span><span class="tag">Auth.js</span><span class="tag">Recharts</span><span class="tag">pdf-lib</span>
+        <p class="project-desc">Deux SaaS d'optimisation de r&eacute;mun&eacute;ration. <strong>Dirigeant Optimizer</strong>&nbsp;: simulation IR/IS/TNS, 5&nbsp;sc&eacute;narios, scoring IA, rapport PDF. <strong>Optimus Liberal</strong>&nbsp;: comparateur de 6&nbsp;structures juridiques.</p>
+        <div class="project-tags">
+          <span class="ptag">Next.js 15</span><span class="ptag">Prisma 7</span><span class="ptag">Auth.js</span><span class="ptag">Recharts</span><span class="ptag">pdf-lib</span>
         </div>
-        <a class="card-go" href="https://optimus-liberal-dirigeant-optimizer.vercel.app" target="_blank" rel="noopener">Dirigeant Optimizer <span>&rarr;</span></a>
+        <a class="project-link" href="https://optimus-liberal-dirigeant-optimizer.vercel.app" target="_blank" rel="noopener">Dirigeant Optimizer <span class="arr">&rarr;</span></a>
       </article>
 
-      <article class="card" style="--cat:var(--cat-leg)">
-        <div class="card-top">
-          <span class="domain">Legaltech</span>
-          <span class="badge badge-live">En ligne</span>
+      <article class="project anim" style="--p-cat: var(--accent-leg)">
+        <div class="project-top">
+          <span class="project-cat">LegalTech</span>
+          <span class="project-badge pb-live">En ligne</span>
         </div>
         <h3>Lanceo</h3>
-        <p class="card-desc">Plateforme SaaS de creation d'entreprise et marketplace d'experts. Questionnaire intelligent, recommandation de forme juridique, generation de documents&nbsp;&mdash; de l'idee a l'immatriculation.</p>
-        <div class="card-tags">
-          <span class="tag">Next.js 15</span><span class="tag">React 19</span><span class="tag">Radix UI</span><span class="tag">NextAuth v5</span>
+        <p class="project-desc">Plateforme SaaS de cr&eacute;ation d'entreprise et marketplace d'experts. Questionnaire intelligent, recommandation de forme juridique, g&eacute;n&eacute;ration de documents.</p>
+        <div class="project-tags">
+          <span class="ptag">Next.js 15</span><span class="ptag">React 19</span><span class="ptag">Radix UI</span><span class="ptag">NextAuth v5</span>
         </div>
       </article>
 
-      <article class="card" style="--cat:var(--cat-cul)">
-        <div class="card-top">
-          <span class="domain">Culture &amp; Sport</span>
-          <span class="badge badge-live">En ligne</span>
-        </div>
-        <h3><a href="https://www.zaalouni105.com" target="_blank" rel="noopener">Zaalouni105.com</a></h3>
-        <p class="card-desc">Recit immersif du but de Zaalouni a la 105<sup>e</sup>&nbsp;minute du derby EST&ndash;CA. Le goal qui offre au Club Africain son 14<sup>e</sup>&nbsp;titre de champion.</p>
-        <div class="card-tags">
-          <span class="tag">Next.js 15</span><span class="tag">Tailwind 4</span><span class="tag">Static</span>
-        </div>
-        <a class="card-go" href="https://www.zaalouni105.com" target="_blank" rel="noopener">zaalouni105.com <span>&rarr;</span></a>
-      </article>
-
-      <article class="card" style="--cat:var(--cat-mus)">
-        <div class="card-top">
-          <span class="domain">Musique</span>
-          <span class="badge badge-live">En ligne</span>
-        </div>
-        <h3><a href="https://haithemsherif.com" target="_blank" rel="noopener">HaithemSherif.com</a></h3>
-        <p class="card-desc">Vitrine d'artiste pour le chanteur tunisien Haithem Sherif. Design oriental sombre et dore, contenu bilingue FR/AR, discographie, espace d'administration autonome.</p>
-        <div class="card-tags">
-          <span class="tag">Next.js 15</span><span class="tag">Neon</span><span class="tag">Vercel Blob</span><span class="tag">JWT</span>
-        </div>
-        <a class="card-go" href="https://haithemsherif.com" target="_blank" rel="noopener">haithemsherif.com <span>&rarr;</span></a>
-      </article>
-
-      <article class="card" style="--cat:var(--cat-spo)">
-        <div class="card-top">
-          <span class="domain">Sport / Gestion</span>
-          <span class="badge badge-live">En ligne</span>
+      <article class="project anim" style="--p-cat: var(--accent-spo); transition-delay:.06s">
+        <div class="project-top">
+          <span class="project-cat">Sport / Gestion</span>
+          <span class="project-badge pb-live">En ligne</span>
         </div>
         <h3><a href="https://agent-fifa.pro" target="_blank" rel="noopener">Agent FIFA Pro</a></h3>
-        <p class="card-desc">Application de gestion pour agents sportifs. Traitement de documents PDF, paiements Stripe, internationalisation.</p>
-        <div class="card-tags">
-          <span class="tag">Next.js 16</span><span class="tag">Prisma 7</span><span class="tag">Stripe</span><span class="tag">next-intl</span>
+        <p class="project-desc">Application de gestion pour agents sportifs. Traitement de documents PDF, paiements Stripe, internationalisation.</p>
+        <div class="project-tags">
+          <span class="ptag">Next.js 16</span><span class="ptag">Prisma 7</span><span class="ptag">Stripe</span><span class="ptag">next-intl</span>
         </div>
-        <a class="card-go" href="https://agent-fifa.pro" target="_blank" rel="noopener">agent-fifa.pro <span>&rarr;</span></a>
+        <a class="project-link" href="https://agent-fifa.pro" target="_blank" rel="noopener">agent-fifa.pro <span class="arr">&rarr;</span></a>
       </article>
 
+      <article class="project anim" style="--p-cat: var(--accent-cul)">
+        <div class="project-top">
+          <span class="project-cat">Culture &amp; Sport</span>
+          <span class="project-badge pb-live">En ligne</span>
+        </div>
+        <h3><a href="https://www.zaalouni105.com" target="_blank" rel="noopener">Zaalouni105.com</a></h3>
+        <p class="project-desc">R&eacute;cit immersif du but de Zaalouni &agrave; la 105<sup>e</sup>&nbsp;minute du derby EST&ndash;CA. Le goal qui offre au Club Africain son 14<sup>e</sup>&nbsp;titre de champion.</p>
+        <div class="project-tags">
+          <span class="ptag">Next.js 15</span><span class="ptag">Tailwind 4</span><span class="ptag">Static</span>
+        </div>
+        <a class="project-link" href="https://www.zaalouni105.com" target="_blank" rel="noopener">zaalouni105.com <span class="arr">&rarr;</span></a>
+      </article>
+
+      <article class="project anim" style="--p-cat: var(--accent-mus); transition-delay:.06s">
+        <div class="project-top">
+          <span class="project-cat">Musique</span>
+          <span class="project-badge pb-live">En ligne</span>
+        </div>
+        <h3><a href="https://haithemsherif.com" target="_blank" rel="noopener">HaithemSherif.com</a></h3>
+        <p class="project-desc">Vitrine d'artiste pour le chanteur tunisien Haithem Sherif. Design oriental sombre et dor&eacute;, contenu bilingue FR/AR, discographie.</p>
+        <div class="project-tags">
+          <span class="ptag">Next.js 15</span><span class="ptag">Neon</span><span class="ptag">Vercel Blob</span><span class="ptag">JWT</span>
+        </div>
+        <a class="project-link" href="https://haithemsherif.com" target="_blank" rel="noopener">haithemsherif.com <span class="arr">&rarr;</span></a>
+      </article>
     </div>
-  </section>
 
-  <div class="divider"></div>
-
-  <section class="sec">
-    <div class="sec-head">
-      <h2 class="sec-title">En developpement</h2>
-      <span class="sec-count">3 projets</span>
+    <!-- EN DEV -->
+    <div class="sec-head anim" style="margin-top:4rem">
+      <p class="sec-label">En cours</p>
+      <h2 class="sec-title">En d&eacute;veloppement</h2>
     </div>
-    <div class="grid">
-
-      <article class="card" style="--cat:var(--cat-cul)">
-        <div class="card-top">
-          <span class="domain">Media sportif</span>
-          <span class="badge badge-dev">En dev</span>
+    <div class="projects-grid">
+      <article class="project anim" style="--p-cat: var(--accent-cul)">
+        <div class="project-top">
+          <span class="project-cat">M&eacute;dia sportif</span>
+          <span class="project-badge pb-dev">En dev</span>
         </div>
         <h3>CA1920.com</h3>
-        <p class="card-desc">Media independant sur le Club Africain. Moteur de veille editoriale CA1920 Radar&nbsp;: collecte multi-sources, deduplication, scoring de confiance.</p>
-        <div class="card-tags">
-          <span class="tag">Next.js 15</span><span class="tag">pgvector</span><span class="tag">Prisma 7</span>
+        <p class="project-desc">M&eacute;dia ind&eacute;pendant sur le Club Africain. Moteur de veille &eacute;ditoriale CA1920 Radar : collecte multi-sources, d&eacute;duplication, scoring de confiance.</p>
+        <div class="project-tags">
+          <span class="ptag">Next.js 15</span><span class="ptag">pgvector</span><span class="ptag">Prisma 7</span>
         </div>
       </article>
 
-      <article class="card" style="--cat:var(--cat-mkt)">
-        <div class="card-top">
-          <span class="domain">Marketing digital</span>
-          <span class="badge badge-dev">En dev</span>
+      <article class="project anim" style="--p-cat: var(--accent-mkt); transition-delay:.06s">
+        <div class="project-top">
+          <span class="project-cat">Marketing digital</span>
+          <span class="project-badge pb-dev">En dev</span>
         </div>
         <h3>Pulsar</h3>
-        <p class="card-desc">Hub de marketing social avec generation de contenu IA, planification, analytics et inbox multi-plateformes.</p>
-        <div class="card-tags">
-          <span class="tag">Next.js 16</span><span class="tag">Supabase</span><span class="tag">Stripe</span><span class="tag">OpenAI</span>
+        <p class="project-desc">Hub de marketing social avec g&eacute;n&eacute;ration de contenu IA, planification, analytics et inbox multi-plateformes.</p>
+        <div class="project-tags">
+          <span class="ptag">Next.js 16</span><span class="ptag">Supabase</span><span class="ptag">Stripe</span><span class="ptag">OpenAI</span>
         </div>
       </article>
 
-      <article class="card" style="--cat:var(--cat-reg)">
-        <div class="card-top">
-          <span class="domain">Conformite</span>
-          <span class="badge badge-dev">En dev</span>
+      <article class="project anim" style="--p-cat: var(--accent-reg)">
+        <div class="project-top">
+          <span class="project-cat">Conformit&eacute;</span>
+          <span class="project-badge pb-dev">En dev</span>
         </div>
         <h3>Regtech Flow</h3>
-        <p class="card-desc">Plateforme RegTech de conformite reglementaire. Ingestion de documents, scoring automatise, piste d'audit verifiable.</p>
-        <div class="card-tags">
-          <span class="tag">Next.js 15</span><span class="tag">Supabase</span>
+        <p class="project-desc">Plateforme RegTech de conformit&eacute; r&eacute;glementaire. Ingestion de documents, scoring automatis&eacute;, piste d'audit v&eacute;rifiable.</p>
+        <div class="project-tags">
+          <span class="ptag">Next.js 15</span><span class="ptag">Supabase</span>
         </div>
       </article>
-
     </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <section class="sec" style="padding-bottom:2.5rem">
-    <div class="sec-head">
-      <h2 class="sec-title">Stack technique</h2>
-    </div>
-    <div class="stack-grid">
-      <span class="si">Next.js 15&ndash;16</span>
-      <span class="si">TypeScript</span>
-      <span class="si">React 19</span>
-      <span class="si">Tailwind CSS 4</span>
-      <span class="si">Prisma 7</span>
-      <span class="si">PostgreSQL / Neon</span>
-      <span class="si">Auth.js v5</span>
-      <span class="si">Vercel</span>
-      <span class="si">Recharts</span>
-      <span class="si">Zod</span>
-      <span class="si">pdf-lib</span>
-      <span class="si">Supabase</span>
-      <span class="si">Stripe</span>
-      <span class="si">Turborepo</span>
-    </div>
-  </section>
-</div>
-
-<footer>
-  <div class="flinks">
-    <a href="https://www.linkedin.com/in/m-ayari/" target="_blank" rel="noopener">LinkedIn</a>
-    <span class="fsep">&middot;</span>
-    <a href="https://github.com/Ayari-59" target="_blank" rel="noopener">GitHub</a>
-    <span class="fsep">&middot;</span>
-    <a href="mailto:contact@ayari.pro">contact@ayari.pro</a>
-    <span class="fsep">&middot;</span>
-    <span>Lille</span>
   </div>
-  <p class="fcopy">&copy; 2026 Mohamed Ayari</p>
+</section>
+
+<!-- FIFA -->
+<section class="sec sec-alt" id="fifa">
+  <div class="wrap">
+    <div class="sec-head anim">
+      <p class="sec-label">Football Business</p>
+      <h2 class="sec-title">Agent FIFA</h2>
+      <p class="sec-desc">Accompagner les joueurs. Conseiller les clubs.</p>
+    </div>
+    <div class="fifa-content">
+      <div class="anim">
+        <div class="fifa-text">
+          <p>Agent de joueurs licence FIFA depuis <strong>novembre 2024</strong>, j'accompagne footballeurs et clubs dans leurs d&eacute;cisions strat&eacute;giques : transferts, n&eacute;gociations contractuelles, d&eacute;veloppement de carri&egrave;re, recrutement.</p>
+          <p>Mon approche se distingue par la compl&eacute;mentarit&eacute; entre <strong>analyse financi&egrave;re</strong>, <strong>vision strat&eacute;gique</strong> et <strong>connaissance du terrain</strong>. Je ne suis pas uniquement un interm&eacute;diaire : je suis un partenaire de d&eacute;veloppement.</p>
+        </div>
+        <ul class="fifa-services">
+          <li>Repr&eacute;sentation et accompagnement de joueurs</li>
+          <li>Conseil en recrutement et scouting</li>
+          <li>N&eacute;gociation de contrats et transferts</li>
+          <li>Strat&eacute;gie de carri&egrave;re et d&eacute;veloppement</li>
+          <li>Conseil aux clubs : structuration, strat&eacute;gie sportive</li>
+          <li>Analyse &eacute;conomique et financi&egrave;re du football</li>
+        </ul>
+        <div class="fifa-zones" style="margin-top:2rem">
+          <p class="fifa-zones-label">&Eacute;cosyst&egrave;me</p>
+          <div class="fifa-zones-list">
+            <span class="fifa-zone">France</span>
+            <span class="fifa-zone">Tunisie</span>
+            <span class="fifa-zone">Afrique du Nord</span>
+            <span class="fifa-zone">R&eacute;seaux internationaux</span>
+          </div>
+        </div>
+      </div>
+      <div class="anim" style="transition-delay:.1s">
+        <div class="fifa-ctas">
+          <a href="#contact" class="fifa-cta">
+            <div class="fifa-cta-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="fifa-cta-text"><strong>Joueur</strong><span>Accompagnement de carri&egrave;re et n&eacute;gociation</span></div>
+          </a>
+          <a href="#contact" class="fifa-cta">
+            <div class="fifa-cta-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div class="fifa-cta-text"><strong>Club</strong><span>Recrutement, scouting et conseil strat&eacute;gique</span></div>
+          </a>
+          <a href="#contact" class="fifa-cta">
+            <div class="fifa-cta-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div class="fifa-cta-text"><strong>Agent / Partenaire</strong><span>Collaboration et r&eacute;seau</span></div>
+          </a>
+        </div>
+        <div style="margin-top:1.5rem">
+          <a href="https://agent-fifa.pro" target="_blank" rel="noopener" class="btn btn-gold">agent-fifa.pro <span style="margin-left:.3em">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="sec-head anim">
+      <p class="sec-label">Contact</p>
+      <h2 class="sec-title">&Eacute;changeons</h2>
+      <p class="sec-desc">Chaque conversation commence par un besoin.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="anim">
+        <ul class="contact-reasons">
+          <li>Conseil &amp; strat&eacute;gie d'entreprise</li>
+          <li>Formation &amp; enseignement</li>
+          <li>Projet entrepreneurial ou digital</li>
+          <li>Football &mdash; joueur</li>
+          <li>Football &mdash; club</li>
+          <li>Partenariat</li>
+        </ul>
+      </div>
+      <div class="contact-channels anim" style="transition-delay:.1s">
+        <a href="mailto:contact@ayari.pro" class="contact-card">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <div class="contact-card-info">
+            <span class="contact-card-label">Email</span>
+            <span class="contact-card-val">contact@ayari.pro</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/m-ayari/" target="_blank" rel="noopener" class="contact-card">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <div class="contact-card-info">
+            <span class="contact-card-label">LinkedIn</span>
+            <span class="contact-card-val">linkedin.com/in/m-ayari</span>
+          </div>
+        </a>
+        <a href="https://github.com/Ayari-59" target="_blank" rel="noopener" class="contact-card">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <div class="contact-card-info">
+            <span class="contact-card-label">GitHub</span>
+            <span class="contact-card-val">Ayari-59</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">&copy; 2026 Mohamed Ayari &mdash; ayari.pro</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/m-ayari/" target="_blank" rel="noopener" class="footer-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Ayari-59" target="_blank" rel="noopener" class="footer-link" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="mailto:contact@ayari.pro" class="footer-link" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+    </div>
+  </div>
 </footer>
 
 <script>
 (function(){
-  var root=document.documentElement,
-      tog=document.getElementById('tog'),
-      tog2=document.getElementById('tog2'),
-      nav=document.getElementById('nav'),
-      reduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-
-  function isDark(){var d=root.getAttribute('data-theme');return d==='dark'||(d!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches)}
-  function sync(){var l=isDark()?'Clair':'Sombre';tog.textContent=l;tog2.textContent=l}
-  function toggle(){var n=isDark()?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('ayari-t',n)}catch(e){}sync()}
-  tog.addEventListener('click',toggle);
-  tog2.addEventListener('click',toggle);
-  try{var s=localStorage.getItem('ayari-t');if(s)root.setAttribute('data-theme',s)}catch(e){}
+  // Theme toggle
+  var tog = document.getElementById('tog'), root = document.documentElement;
+  function isDark() { var d = root.getAttribute('data-theme'); return d === 'dark' || (d !== 'light' && window.matchMedia('(prefers-color-scheme:dark)').matches); }
+  function sync() { tog.textContent = isDark() ? 'Clair' : 'Sombre'; }
+  tog.addEventListener('click', function() {
+    var n = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', n);
+    try { localStorage.setItem('ayari-t', n); } catch(e) {}
+    sync(); drawGeo();
+  });
+  try { var s = localStorage.getItem('ayari-t'); if (s) root.setAttribute('data-theme', s); } catch(e) {}
   sync();
 
-  var lastY=0,ticking=false;
-  function onScroll(){
-    var y=window.scrollY;
-    if(y>400){nav.classList.add('show')}else{nav.classList.remove('show')}
-    lastY=y;ticking=false
-  }
-  window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(onScroll);ticking=true}},{passive:true});
-
-  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.06});
-  document.querySelectorAll('.card').forEach(function(el,i){
-    if(!reduced)el.style.transitionDelay=((i%2)*.12)+'s';
-    obs.observe(el)
-  });
-  document.querySelectorAll('.about-grid > *').forEach(function(el,i){
-    if(!reduced)el.style.transitionDelay=(i*.09)+'s';
-    obs.observe(el)
+  // Mobile nav
+  var burger = document.getElementById('burger'), navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', function() { navLinks.classList.toggle('open'); });
+  document.querySelectorAll('.nav-link').forEach(function(l) {
+    l.addEventListener('click', function() { navLinks.classList.remove('open'); });
   });
 
-  if(!reduced){
-    document.querySelectorAll('.card').forEach(function(card){
-      card.addEventListener('mousemove',function(e){
-        var r=card.getBoundingClientRect();
-        card.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
-        card.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%')
-      })
-    })
+  // Nav scroll
+  var nav = document.getElementById('nav');
+  var lastScroll = 0;
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Canvas geometric
+  var c = document.getElementById('geo'), ctx = c.getContext('2d'), dpr = window.devicePixelRatio || 1, ang = 0;
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function resize() {
+    var r = c.parentElement.getBoundingClientRect();
+    c.width = r.width * dpr; c.height = r.height * dpr;
+    c.style.width = r.width + 'px'; c.style.height = r.height + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
+  function drawGeo() {
+    var w = c.width / dpr, h = c.height / dpr;
+    ctx.clearRect(0, 0, w, h);
+    var style = getComputedStyle(root);
+    var col = isDark() ? 'rgba(91,155,213,0.04)' : 'rgba(15,43,76,0.05)';
+    ctx.strokeStyle = col; ctx.lineWidth = .7;
+    var cx = w * .72, cy = h * .45, r = Math.min(w, h) * .35;
+    for (var i = 1; i <= 8; i++) { ctx.beginPath(); ctx.arc(cx, cy, r * i / 8, 0, Math.PI * 2); ctx.stroke(); }
+    for (var i = 0; i < 16; i++) { var a = ang + i * Math.PI / 8; ctx.beginPath(); ctx.moveTo(cx + Math.cos(a) * r * .1, cy + Math.sin(a) * r * .1); ctx.lineTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r); ctx.stroke(); }
+    ctx.lineWidth = 1;
+    for (var i = 0; i < 2; i++) { ctx.save(); ctx.translate(cx, cy); ctx.rotate(ang + i * Math.PI / 4); var sz = r * .7; ctx.strokeRect(-sz/2, -sz/2, sz, sz); ctx.restore(); }
+    ctx.lineWidth = .5;
+    for (var i = 0; i < 4; i++) { ctx.save(); ctx.translate(cx, cy); ctx.rotate(ang + i * Math.PI / 4); var s2 = r * .5; ctx.beginPath(); ctx.moveTo(0, -s2); ctx.lineTo(s2, 0); ctx.lineTo(0, s2); ctx.lineTo(-s2, 0); ctx.closePath(); ctx.stroke(); ctx.restore(); }
+  }
+  function loop() { drawGeo(); if (!reducedMotion) { ang += .0003; requestAnimationFrame(loop); } }
+  window.addEventListener('resize', function() { resize(); drawGeo(); });
+  resize(); loop();
+
+  // Scroll animations
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+  }, { threshold: .06 });
+  document.querySelectorAll('.anim').forEach(function(el) { obs.observe(el); });
 })();
 </script>
+</body>
+</html>
