@@ -186,8 +186,16 @@ img { max-width: 100%; display: block; }
 .sec-divider { height: 1px; background: var(--border); }
 
 /* ─── ABOUT ─── */
-.about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-@media (max-width: 768px) { .about-content { grid-template-columns: 1fr; gap: 2rem; } }
+.about-content { max-width: 72ch; }
+.about-parcours { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
+@media (max-width: 600px) { .about-parcours { grid-template-columns: 1fr; } }
+.about-station { padding: 1.2rem 1.4rem; border: 1px solid var(--border); border-radius: var(--r); background: var(--card); border-left: 3px solid var(--pil-fin); }
+.about-station:nth-child(2) { border-left-color: var(--pil-form); }
+.about-station:nth-child(3) { border-left-color: var(--pil-dig); }
+.about-station:nth-child(4) { border-left-color: var(--pil-fin); }
+.about-station:nth-child(5) { border-left-color: var(--gold); grid-column: 1 / -1; }
+.about-station p { font-size: .88rem; color: var(--fg2); line-height: 1.7; }
+.about-station strong { color: var(--fg); }
 .about-text { color: var(--fg2); font-size: .95rem; line-height: 1.85; }
 .about-text strong { color: var(--fg); font-weight: 600; }
 .about-text p + p { margin-top: 1rem; }
@@ -230,7 +238,7 @@ img { max-width: 100%; display: block; }
 .expertise-item p { font-size: .84rem; color: var(--fg3); line-height: 1.6; }
 
 /* ─── FORMATION ─── */
-.formation-content { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: start; }
+.formation-content { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: center; }
 @media (max-width: 768px) { .formation-content { grid-template-columns: 1fr; gap: 2rem; } }
 .formation-text { color: var(--fg2); font-size: .95rem; line-height: 1.85; }
 .formation-text p + p { margin-top: 1rem; }
@@ -288,7 +296,7 @@ img { max-width: 100%; display: block; }
 .fifa-zone { font-size: .82rem; color: var(--fg2); padding: .3em .7em; background: var(--tag-bg); border-radius: 4px; }
 
 /* ─── CONTACT ─── */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
 @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 2rem; } }
 .contact-reasons { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
 .contact-reasons li { display: flex; align-items: center; gap: .5rem; font-size: .92rem; color: var(--fg2); padding: .5em 0; border-bottom: 1px solid var(--border-l); }
@@ -382,34 +390,40 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
       <h2 class="sec-title">&Agrave; propos</h2>
       <p class="sec-desc"></p>
     </div>
-    <div class="about-content">
-      <div class="anim">
-        <div class="about-text">
-          <p>Form&eacute; &agrave; l'<strong>IAE de Nice</strong> en sciences de gestion, sp&eacute;cialis&eacute; dans la gouvernance et la qualit&eacute; de l'information financi&egrave;re, j'enseigne aujourd'hui le contr&ocirc;le de gestion et la communication professionnelle en <strong>DCG et DSCG</strong> au <strong>campus La Salle &agrave; Lille</strong>.</p>
-          <p>En parall&egrave;le, je d&eacute;veloppe des plateformes num&eacute;riques &mdash; de l'optimisation fiscale des dirigeants &agrave; la p&eacute;dagogie du DCG &mdash; et j'accompagne joueurs et clubs de football en tant qu'<strong>agent FIFA</strong>.</p>
-          <p>Ce qui relie ces activit&eacute;s : une m&ecirc;me m&eacute;thode. Comprendre un probl&egrave;me, le structurer, construire une solution. Que le terrain soit une entreprise, une salle de cours, un &eacute;cran ou un stade.</p>
-        </div>
-        <div class="about-quote">
-          <p>&laquo;&nbsp;Trouver des grilles de lecture qui rendent accessibles les probl&eacute;matiques les plus complexes et faire &eacute;merger le besoin de savoir et d'apprendre.&nbsp;&raquo;</p>
-        </div>
+    <div class="about-content anim">
+      <div class="about-text">
+        <p>Form&eacute; &agrave; l'<strong>IAE de Nice</strong> en sciences de gestion, sp&eacute;cialis&eacute; dans la gouvernance et la qualit&eacute; de l'information financi&egrave;re, j'enseigne aujourd'hui le contr&ocirc;le de gestion et la communication professionnelle en <strong>DCG et DSCG</strong> au <strong>campus La Salle &agrave; Lille</strong>.</p>
+        <p>En parall&egrave;le, je d&eacute;veloppe des plateformes num&eacute;riques &mdash; de l'optimisation fiscale des dirigeants &agrave; la p&eacute;dagogie du DCG &mdash; et j'accompagne joueurs et clubs de football en tant qu'<strong>agent FIFA</strong>.</p>
+        <p>Ce qui relie ces activit&eacute;s : une m&ecirc;me m&eacute;thode. Comprendre un probl&egrave;me, le structurer, construire une solution. Que le terrain soit une entreprise, une salle de cours, un &eacute;cran ou un stade.</p>
       </div>
-      <div class="anim" style="transition-delay:.1s">
-        <div class="about-text">
-          <p><strong>Tunis</strong> &mdash; Tout commence ici. MSTCF &agrave; l'INTEC / Universit&eacute; Libre de Tunis, puis premier poste en contr&ocirc;le de gestion au Groupe du Belv&eacute;d&egrave;re. C'est l&agrave; que na&icirc;t le go&ucirc;t pour les chiffres qui racontent une histoire.</p>
-          <p><strong>Nice</strong> &mdash; Cap sur la recherche. DEA de Sciences de gestion &agrave; l'IAE, &eacute;cole doctorale. En parall&egrave;le, j'enseigne d&eacute;j&agrave; : connaissance d'entreprise &agrave; <strong>Polytech Sophia Antipolis</strong>, comptabilit&eacute; &agrave; l'<strong>Institut Saint-Joseph</strong>, gestion au lyc&eacute;e h&ocirc;telier <strong>Anne-Sophie Pic &agrave; Toulon</strong>. Et du conseil, parce qu'un probl&egrave;me pos&eacute; par un vrai dirigeant, &ccedil;a ne s'invente pas en amphi.</p>
-          <p><strong>Montargis</strong> &mdash; Professeur de gestion appliqu&eacute;e au <strong>lyc&eacute;e h&ocirc;telier</strong>. L'enseignement technique, concret, les pieds sur terre. Une &eacute;tape qui ancre la p&eacute;dagogie dans le r&eacute;el.</p>
-          <p><strong>Lille</strong> (depuis 2019) &mdash; Le chapitre actuel. Contr&ocirc;le de gestion et communication professionnelle au <strong>campus La Salle</strong>, enseignant &agrave; l'<strong>Universit&eacute; Catholique de Lille</strong>. Et un virage : le num&eacute;rique &eacute;ducatif, l'IA, l'entrepreneuriat digital. Tout ce que j'ai appris, je le transforme en plateformes.</p>
-          <p><strong>Et en fil rouge</strong> &mdash; Une curiosit&eacute; qui ne s'arr&ecirc;te jamais. Technicien PNL, int&eacute;r&ecirc;t pour l'analyse transactionnelle et l'IKIGAI. Trader passionn&eacute;, adepte de l'<strong>Ichimoku Kinko Hyo</strong> &mdash; la rigueur analytique faite m&eacute;thode. Et depuis novembre 2024, agent FIFA : la finance et la strat&eacute;gie port&eacute;es sur le terrain.</p>
-        </div>
-        <div class="about-facts">
-          <span class="about-fact">Tunis &rarr; Nice &rarr; Montargis &rarr; Lille</span>
-          <span class="about-fact">DEA Sciences de gestion</span>
-          <span class="about-fact">Technicien PNL</span>
-          <span class="about-fact">Trading &amp; Ichimoku</span>
-          <span class="about-fact">Football</span>
-          <span class="about-fact">Basket</span>
-          <span class="about-fact">Tennis</span>
-        </div>
+      <div class="about-quote">
+        <p>&laquo;&nbsp;Trouver des grilles de lecture qui rendent accessibles les probl&eacute;matiques les plus complexes et faire &eacute;merger le besoin de savoir et d'apprendre.&nbsp;&raquo;</p>
+      </div>
+      <div class="about-facts">
+        <span class="about-fact">Tunis &rarr; Nice &rarr; Montargis &rarr; Lille</span>
+        <span class="about-fact">DEA Sciences de gestion</span>
+        <span class="about-fact">Technicien PNL</span>
+        <span class="about-fact">Trading &amp; Ichimoku</span>
+        <span class="about-fact">Football</span>
+        <span class="about-fact">Basket</span>
+        <span class="about-fact">Tennis</span>
+      </div>
+    </div>
+    <div class="about-parcours anim" style="transition-delay:.1s">
+      <div class="about-station">
+        <p><strong>Tunis</strong> &mdash; Tout commence ici. MSTCF &agrave; l'INTEC / Universit&eacute; Libre de Tunis, puis premier poste en contr&ocirc;le de gestion au Groupe du Belv&eacute;d&egrave;re. C'est l&agrave; que na&icirc;t le go&ucirc;t pour les chiffres qui racontent une histoire.</p>
+      </div>
+      <div class="about-station">
+        <p><strong>Nice</strong> &mdash; Cap sur la recherche. DEA de Sciences de gestion &agrave; l'IAE, &eacute;cole doctorale. Enseignant &agrave; <strong>Polytech Sophia Antipolis</strong>, &agrave; l'<strong>Institut Saint-Joseph</strong>, au lyc&eacute;e h&ocirc;telier <strong>Anne-Sophie Pic &agrave; Toulon</strong>. Et du conseil, parce qu'un probl&egrave;me pos&eacute; par un vrai dirigeant, &ccedil;a ne s'invente pas en amphi.</p>
+      </div>
+      <div class="about-station">
+        <p><strong>Montargis</strong> &mdash; Professeur de gestion appliqu&eacute;e au <strong>lyc&eacute;e h&ocirc;telier</strong>. L'enseignement technique, concret, les pieds sur terre. Pilotage des premi&egrave;res exp&eacute;riences de classes num&eacute;riques. Une &eacute;tape qui ancre la p&eacute;dagogie dans le r&eacute;el.</p>
+      </div>
+      <div class="about-station">
+        <p><strong>Lille</strong> (depuis 2019) &mdash; Le chapitre actuel. Contr&ocirc;le de gestion et communication professionnelle au <strong>campus La Salle</strong>, enseignant &agrave; l'<strong>Universit&eacute; Catholique de Lille</strong>. Le virage num&eacute;rique, l'IA, l'entrepreneuriat digital. Tout ce que j'ai appris, je le transforme en plateformes.</p>
+      </div>
+      <div class="about-station">
+        <p><strong>Et en fil rouge</strong> &mdash; Une curiosit&eacute; qui ne s'arr&ecirc;te jamais. Technicien PNL, int&eacute;r&ecirc;t pour l'analyse transactionnelle et l'IKIGAI. Trader passionn&eacute;, adepte de l'<strong>Ichimoku Kinko Hyo</strong> &mdash; la rigueur analytique faite m&eacute;thode. Et depuis novembre 2024, agent FIFA : la finance et la strat&eacute;gie port&eacute;es sur le terrain.</p>
       </div>
     </div>
   </div>
