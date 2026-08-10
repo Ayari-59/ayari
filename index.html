@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohamed Ayari — Finance, Formation, Digital & Football Business</title>
-<meta name="description" content="Mohamed Ayari, professeur de gestion, entrepreneur digital et agent FIFA. Expertise en controle de gestion, DCG/DSCG, plateformes numeriques et football business.">
+<title>Mohamed Ayari — Finance, Formation & Digital</title>
+<meta name="description" content="Mohamed Ayari, professeur de gestion et entrepreneur digital. Expertise en controle de gestion, DCG/DSCG, plateformes numeriques.">
 <meta name="author" content="Mohamed Ayari">
 <meta property="og:title" content="Mohamed Ayari — Analyser. Structurer. Developper.">
-<meta property="og:description" content="Expert en gestion et finance, entrepreneur digital, agent FIFA. Au croisement de la finance, de la formation, du digital et du football professionnel.">
+<meta property="og:description" content="Expert en gestion et finance, entrepreneur digital. Au croisement de la finance, de la formation et du digital.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ayari.pro">
 <link rel="canonical" href="https://ayari.pro">
@@ -41,6 +41,7 @@
   --pil-form: #2563EB;
   --pil-dig: #059669;
   --pil-fifa: #D97706;
+  --pil-3: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig));
   --shadow: 0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.04);
   --shadow-l: 0 8px 40px rgba(0,0,0,.08);
   --f-d: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -135,7 +136,7 @@ img { max-width: 100%; display: block; }
 .hero-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; }
 .hero-bg canvas { width: 100%; height: 100%; }
 .hero-inner { position: relative; z-index: 1; max-width: var(--mw); margin: 0 auto; padding: 0 var(--gut); width: 100%; }
-.hero-stripe { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig), var(--pil-fifa)); z-index: 101; }
+.hero-stripe { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig)); z-index: 101; }
 .hero-top { font-family: var(--f-m); font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; color: var(--fg3); margin-bottom: 1.8rem; display: flex; gap: .3em; flex-wrap: wrap; }
 .hero-top-w { transition: color .3s; }
 .hero-top-w:nth-child(1) { color: var(--pil-fin); }
@@ -144,7 +145,6 @@ img { max-width: 100%; display: block; }
 .hero-top-w:nth-child(4) { color: var(--fg3); }
 .hero-top-w:nth-child(5) { color: var(--pil-dig); }
 .hero-top-w:nth-child(6) { color: var(--fg3); }
-.hero-top-w:nth-child(7) { color: var(--pil-fifa); }
 .hero h1 { font-family: var(--f-d); font-size: clamp(2.8rem, 8vw, 5.5rem); font-weight: 400; line-height: 1.05; letter-spacing: -.025em; color: var(--fg); margin-bottom: 1rem; }
 .hero-baseline { font-family: var(--f-d); font-size: clamp(1.15rem, 2.5vw, 1.5rem); color: var(--gold); font-style: italic; letter-spacing: .01em; margin-bottom: 1.6rem; }
 .hero-sub { font-family: var(--f-s); font-size: clamp(.92rem, 1.5vw, 1.05rem); color: var(--fg2); max-width: 52ch; line-height: 1.8; margin-bottom: 2.2rem; }
@@ -192,7 +192,7 @@ img { max-width: 100%; display: block; }
 .about-text strong { color: var(--fg); font-weight: 600; }
 .about-text p + p { margin-top: 1rem; }
 .about-quote { border-left: none; padding-left: 1.5rem; margin-top: 1.5rem; position: relative; }
-.about-quote::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--pil-fin), var(--pil-form), var(--pil-dig), var(--pil-fifa)); border-radius: 2px; }
+.about-quote::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--pil-fin), var(--pil-form), var(--pil-dig)); border-radius: 2px; }
 .about-quote p { font-family: var(--f-d); font-size: 1.05rem; font-style: italic; color: var(--fg); line-height: 1.7; }
 .about-facts { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
 .about-fact { display: flex; align-items: center; gap: .5em; font-family: var(--f-m); font-size: .8rem; color: var(--fg2); }
@@ -205,7 +205,7 @@ img { max-width: 100%; display: block; }
 .about-fact:nth-child(6)::before { background: var(--pil-form); }
 
 /* ─── PILLARS ─── */
-.pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 @media (max-width: 900px) { .pillars { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .pillars { grid-template-columns: 1fr; } }
 .pillar { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 1.8rem 1.5rem; display: flex; flex-direction: column; gap: .8rem; transition: transform .25s, box-shadow .25s; position: relative; overflow: hidden; }
@@ -297,8 +297,7 @@ img { max-width: 100%; display: block; }
 .contact-reasons li:nth-child(2)::before { background: var(--pil-form); }
 .contact-reasons li:nth-child(3)::before { background: var(--pil-dig); }
 .contact-reasons li:nth-child(4)::before { background: var(--pil-fifa); }
-.contact-reasons li:nth-child(5)::before { background: var(--pil-fifa); }
-.contact-reasons li:nth-child(6)::before { background: var(--pil-dig); }
+.contact-reasons li:nth-child(5)::before { background: var(--pil-dig); }
 .contact-channels { display: flex; flex-direction: column; gap: 1rem; }
 .contact-card { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--r); transition: all .2s; text-decoration: none; color: var(--fg); }
 .contact-card:hover { border-color: var(--navy); box-shadow: var(--shadow); color: var(--fg); }
@@ -309,7 +308,7 @@ img { max-width: 100%; display: block; }
 
 /* ─── FOOTER ─── */
 footer { border-top: none; padding: 3rem 0; position: relative; }
-footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig), var(--pil-fifa)); }
+footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig)); }
 .footer-inner { max-width: var(--mw); margin: 0 auto; padding: 0 var(--gut); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .footer-copy { font-size: .8rem; color: var(--fg3); }
 .footer-links { display: flex; gap: 1rem; align-items: center; }
@@ -343,7 +342,6 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
       <a href="#about" class="nav-link">Profil</a>
       <a href="#expertise" class="nav-link">Expertise</a>
       <a href="#projets" class="nav-link">Projets</a>
-      <a href="#fifa" class="nav-link">FIFA</a>
       <a href="#contact" class="nav-link">Contact</a>
       <button class="nav-tog" id="tog" aria-label="Changer de theme">Sombre</button>
     </div>
@@ -358,15 +356,14 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
 <section class="hero" id="hero">
   <div class="hero-bg"><canvas id="geo"></canvas></div>
   <div class="hero-inner">
-    <p class="hero-top"><span class="hero-top-w">Finance</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Formation</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Digital</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Football Business</span></p>
+    <p class="hero-top"><span class="hero-top-w">Finance</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Formation</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Digital</span></p>
     <h1>Mohamed<br>Ayari</h1>
     <p class="hero-baseline">Analyser. Structurer. D&eacute;velopper.</p>
-    <p class="hero-sub">Au croisement de la finance, de la formation, du digital et du football professionnel. Ce site est une fen&ecirc;tre ouverte &mdash; pour partager, &eacute;changer et avancer ensemble sur des projets qui ont du sens.</p>
+    <p class="hero-sub">Au croisement de la finance, de la formation et du digital. Ce site est une fen&ecirc;tre ouverte &mdash; pour partager, &eacute;changer et avancer ensemble sur des projets qui ont du sens.</p>
     <div class="hero-roles">
       <span class="hero-role hr-fin">Finance &amp; Gestion</span>
       <span class="hero-role hr-ens">Formation &amp; Transmission</span>
       <span class="hero-role hr-dig">Digital &amp; Entrepreneuriat</span>
-      <span class="hero-role hr-fifa">Agent FIFA</span>
     </div>
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-primary">Collaborer</a>
@@ -402,7 +399,7 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
           <p><strong>Nice</strong> &mdash; Cap sur la recherche. DEA de Sciences de gestion &agrave; l'IAE, &eacute;cole doctorale. En parall&egrave;le, j'enseigne d&eacute;j&agrave; : connaissance d'entreprise &agrave; <strong>Polytech Sophia Antipolis</strong>, comptabilit&eacute; &agrave; l'<strong>Institut Saint-Joseph</strong>, gestion au lyc&eacute;e h&ocirc;telier <strong>Anne-Sophie Pic &agrave; Toulon</strong>. Et du conseil, parce qu'un probl&egrave;me pos&eacute; par un vrai dirigeant, &ccedil;a ne s'invente pas en amphi.</p>
           <p><strong>Montargis</strong> &mdash; Professeur de gestion appliqu&eacute;e au <strong>lyc&eacute;e h&ocirc;telier</strong>. L'enseignement technique, concret, les pieds sur terre. Une &eacute;tape qui ancre la p&eacute;dagogie dans le r&eacute;el.</p>
           <p><strong>Lille</strong> (depuis 2019) &mdash; Le chapitre actuel. Contr&ocirc;le de gestion et communication professionnelle au <strong>campus La Salle</strong>, enseignant &agrave; l'<strong>Universit&eacute; Catholique de Lille</strong>. Et un virage : le num&eacute;rique &eacute;ducatif, l'IA, l'entrepreneuriat digital. Tout ce que j'ai appris, je le transforme en plateformes.</p>
-          <p><strong>Et en fil rouge</strong> &mdash; Une curiosit&eacute; qui ne s'arr&ecirc;te jamais. Technicien PNL. Trader passionn&eacute;, adepte de l'<strong>Ichimoku Kinko Hyo</strong> &mdash; la rigueur analytique faite m&eacute;thode. Et depuis novembre 2024, agent FIFA : la finance et la strat&eacute;gie port&eacute;es sur le terrain.</p>
+          <p><strong>Et en fil rouge</strong> &mdash; Une curiosit&eacute; qui ne s'arr&ecirc;te jamais. Technicien PNL, int&eacute;r&ecirc;t pour l'analyse transactionnelle et l'IKIGAI. Trader passionn&eacute;, adepte de l'<strong>Ichimoku Kinko Hyo</strong> &mdash; la rigueur analytique faite m&eacute;thode. Et depuis novembre 2024, agent FIFA : la finance et la strat&eacute;gie port&eacute;es sur le terrain.</p>
         </div>
         <div class="about-facts">
           <span class="about-fact">Tunis &rarr; Nice &rarr; Montargis &rarr; Lille</span>
@@ -422,9 +419,9 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
 <section class="sec sec-alt" id="piliers">
   <div class="wrap">
     <div class="sec-head anim">
-      <p class="sec-label">Quatre piliers</p>
+      <p class="sec-label">Trois piliers</p>
       <h2 class="sec-title">Un profil &agrave; intersections</h2>
-      <p class="sec-desc">L&agrave; o&ugrave; d'autres s&eacute;parent finance, enseignement, digital et sport, je les connecte.</p>
+      <p class="sec-desc">L&agrave; o&ugrave; d'autres s&eacute;parent finance, enseignement et digital, je les connecte.</p>
     </div>
     <div class="pillars">
       <div class="pillar anim" style="--p-color: var(--pil-fin)">
@@ -444,12 +441,6 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
         <h3>Digital, IA &amp; Entrepreneuriat</h3>
         <p>Plateformes SaaS, EdTech, FinTech, LegalTech, intelligence artificielle. Transformer l'expertise m&eacute;tier en produits num&eacute;riques.</p>
         <a href="#projets" class="pillar-link">Voir les projets <span class="arr">&rarr;</span></a>
-      </div>
-      <div class="pillar anim" style="--p-color: var(--pil-fifa); transition-delay:.18s">
-        <div class="pillar-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg></div>
-        <h3>Football Business &amp; FIFA</h3>
-        <p>Agent de joueurs licence FIFA. Recrutement, scouting, d&eacute;veloppement de carri&egrave;re, strat&eacute;gie de clubs.</p>
-        <a href="#fifa" class="pillar-link">En savoir plus <span class="arr">&rarr;</span></a>
       </div>
     </div>
   </div>
@@ -478,7 +469,7 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
       </div>
       <div class="expertise-item anim" style="--e-color: var(--pil-form); transition-delay:.12s">
         <h4>Formation</h4>
-        <p>P&eacute;dagogie, ing&eacute;nierie de formation, conception de ressources, EdTech, PNL, d&eacute;veloppement personnel.</p>
+        <p>P&eacute;dagogie, ing&eacute;nierie de formation, conception de ressources, EdTech, PNL, analyse transactionnelle, IKIGAI.</p>
       </div>
       <div class="expertise-item anim" style="--e-color: var(--pil-dig); transition-delay:.16s">
         <h4>Digital &amp; IA</h4>
@@ -658,56 +649,22 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
   </div>
 </section>
 
-<!-- FIFA -->
+<!-- FIFA — encart -->
 <section class="sec sec-alt" id="fifa">
   <div class="wrap">
-    <div class="sec-head anim">
-      <p class="sec-label sec-label-fifa">Football Business</p>
-      <h2 class="sec-title">Agent FIFA</h2>
-      <p class="sec-desc">Accompagner les joueurs. Conseiller les clubs.</p>
-    </div>
-    <div class="fifa-content">
-      <div class="anim">
-        <div class="fifa-text">
-          <p>Agent de joueurs licence FIFA depuis <strong>novembre 2024</strong>, j'accompagne footballeurs et clubs dans leurs d&eacute;cisions strat&eacute;giques : transferts, n&eacute;gociations contractuelles, d&eacute;veloppement de carri&egrave;re, recrutement.</p>
-          <p>Mon approche se distingue par la compl&eacute;mentarit&eacute; entre <strong>analyse financi&egrave;re</strong>, <strong>vision strat&eacute;gique</strong> et <strong>connaissance du terrain</strong>. Je ne suis pas uniquement un interm&eacute;diaire : je suis un partenaire de d&eacute;veloppement.</p>
-        </div>
-        <ul class="fifa-services">
-          <li>Repr&eacute;sentation et accompagnement de joueurs</li>
-          <li>Conseil en recrutement et scouting</li>
-          <li>N&eacute;gociation de contrats et transferts</li>
-          <li>Strat&eacute;gie de carri&egrave;re et d&eacute;veloppement</li>
-          <li>Conseil aux clubs : structuration, strat&eacute;gie sportive</li>
-          <li>Analyse &eacute;conomique et financi&egrave;re du football</li>
-        </ul>
-        <div class="fifa-zones" style="margin-top:2rem">
-          <p class="fifa-zones-label">&Eacute;cosyst&egrave;me</p>
-          <div class="fifa-zones-list">
-            <span class="fifa-zone">France</span>
-            <span class="fifa-zone">Tunisie</span>
-            <span class="fifa-zone">Afrique du Nord</span>
-            <span class="fifa-zone">R&eacute;seaux internationaux</span>
-          </div>
-        </div>
+    <div class="anim" style="max-width:760px; margin:0 auto; text-align:center">
+      <p class="sec-label sec-label-fifa" style="text-align:center">&Eacute;galement</p>
+      <h2 class="sec-title" style="text-align:center; margin-bottom:1rem">Agent FIFA</h2>
+      <p style="color:var(--fg2); font-size:.95rem; line-height:1.8; margin-bottom:1.5rem">Agent de joueurs licence FIFA depuis <strong>novembre 2024</strong>. J'accompagne footballeurs et clubs dans leurs d&eacute;cisions strat&eacute;giques &mdash; transferts, n&eacute;gociations, d&eacute;veloppement de carri&egrave;re &mdash; avec la m&ecirc;me m&eacute;thode : analyse financi&egrave;re, vision strat&eacute;gique, connaissance du terrain.</p>
+      <div style="display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap; margin-bottom:1.5rem">
+        <span class="fifa-zone">France</span>
+        <span class="fifa-zone">Tunisie</span>
+        <span class="fifa-zone">Afrique du Nord</span>
+        <span class="fifa-zone">R&eacute;seaux internationaux</span>
       </div>
-      <div class="anim" style="transition-delay:.1s">
-        <div class="fifa-ctas">
-          <a href="#contact" class="fifa-cta">
-            <div class="fifa-cta-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-            <div class="fifa-cta-text"><strong>Joueur</strong><span>Accompagnement de carri&egrave;re et n&eacute;gociation</span></div>
-          </a>
-          <a href="#contact" class="fifa-cta">
-            <div class="fifa-cta-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-            <div class="fifa-cta-text"><strong>Club</strong><span>Recrutement, scouting et conseil strat&eacute;gique</span></div>
-          </a>
-          <a href="#contact" class="fifa-cta">
-            <div class="fifa-cta-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-            <div class="fifa-cta-text"><strong>Agent / Partenaire</strong><span>Collaboration et r&eacute;seau</span></div>
-          </a>
-        </div>
-        <div style="margin-top:1.5rem">
-          <a href="https://agent-fifa.pro" target="_blank" rel="noopener" class="btn btn-gold">agent-fifa.pro <span style="margin-left:.3em">&rarr;</span></a>
-        </div>
+      <div style="display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap">
+        <a href="#contact" class="btn btn-outline">Me contacter</a>
+        <a href="https://agent-fifa.pro" target="_blank" rel="noopener" class="btn btn-gold">agent-fifa.pro <span style="margin-left:.3em">&rarr;</span></a>
       </div>
     </div>
   </div>
@@ -727,8 +684,7 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
           <li>Conseil &amp; strat&eacute;gie d'entreprise</li>
           <li>Formation &amp; enseignement</li>
           <li>Projet entrepreneurial ou digital</li>
-          <li>Football &mdash; joueur</li>
-          <li>Football &mdash; club</li>
+          <li>Football &mdash; joueur ou club</li>
           <li>Partenariat ou projet commun</li>
         </ul>
       </div>
@@ -816,17 +772,16 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
     var opa = dk ? .07 : .14;
     var opaFill = dk ? .03 : .05;
     var cols = dk
-      ? ['107,163,232', '96,165,250', '52,211,153', '251,191,36']
-      : ['23,70,162', '37,99,235', '5,150,105', '217,119,6'];
+      ? ['107,163,232', '96,165,250', '52,211,153']
+      : ['23,70,162', '37,99,235', '5,150,105'];
 
     var nodes = [
-      { x: w*.78, y: h*.32, r: Math.min(w,h)*.22, rot: ang },
-      { x: w*.55, y: h*.62, r: Math.min(w,h)*.18, rot: -ang*1.3 },
-      { x: w*.88, y: h*.7,  r: Math.min(w,h)*.15, rot: ang*.7 },
-      { x: w*.35, y: h*.28, r: Math.min(w,h)*.12, rot: -ang*1.1 }
+      { x: w*.78, y: h*.32, r: Math.min(w,h)*.24, rot: ang },
+      { x: w*.50, y: h*.65, r: Math.min(w,h)*.20, rot: -ang*1.3 },
+      { x: w*.85, y: h*.72, r: Math.min(w,h)*.16, rot: ang*.7 }
     ];
 
-    for (var n = 0; n < 4; n++) {
+    for (var n = 0; n < 3; n++) {
       var nd = nodes[n], col = cols[n];
 
       ctx.strokeStyle = 'rgba('+col+','+opa+')';
@@ -868,13 +823,6 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
           ctx.closePath(); ctx.stroke();
         }
         ctx.restore();
-      } else {
-        ctx.save(); ctx.translate(nd.x, nd.y); ctx.rotate(nd.rot);
-        var d = nd.r * .6;
-        ctx.beginPath(); ctx.moveTo(0,-d); ctx.lineTo(d,0); ctx.lineTo(0,d); ctx.lineTo(-d,0); ctx.closePath(); ctx.stroke();
-        d = nd.r * .4;
-        ctx.beginPath(); ctx.moveTo(0,-d); ctx.lineTo(d,0); ctx.lineTo(0,d); ctx.lineTo(-d,0); ctx.closePath(); ctx.stroke();
-        ctx.restore();
       }
 
       ctx.fillStyle = 'rgba('+col+','+opaFill+')';
@@ -883,11 +831,11 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
 
     ctx.strokeStyle = 'rgba('+cols[0]+','+(opa*.5)+')';
     ctx.lineWidth = .3;
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 2; i++) {
       var a = nodes[i], b = nodes[i+1];
       ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
     }
-    ctx.beginPath(); ctx.moveTo(nodes[0].x, nodes[0].y); ctx.lineTo(nodes[3].x, nodes[3].y); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(nodes[0].x, nodes[0].y); ctx.lineTo(nodes[2].x, nodes[2].y); ctx.stroke();
   }
   function loop() { drawGeo(); if (!reducedMotion) { ang += .0003; requestAnimationFrame(loop); } }
   window.addEventListener('resize', function() { resize(); drawGeo(); });
