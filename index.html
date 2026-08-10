@@ -186,6 +186,8 @@ img { max-width: 100%; display: block; }
 .sec-divider { height: 1px; background: var(--border); }
 
 /* ─── ABOUT ─── */
+.about-photo { width: 140px; height: 140px; border-radius: 50%; overflow: hidden; border: 3px solid var(--border); box-shadow: var(--shadow-l); margin-bottom: 1.5rem; flex-shrink: 0; }
+.about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
 .about-content { max-width: 72ch; }
 .about-parcours { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
 @media (max-width: 600px) { .about-parcours { grid-template-columns: 1fr; } }
@@ -391,6 +393,9 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
       <p class="sec-desc"></p>
     </div>
     <div class="about-content anim">
+      <div class="about-photo">
+        <img src="photo.png" alt="Mohamed Ayari" width="140" height="140">
+      </div>
       <div class="about-text">
         <p>Form&eacute; &agrave; l'<strong>IAE de Nice</strong> en sciences de gestion, sp&eacute;cialis&eacute; dans la gouvernance et la qualit&eacute; de l'information financi&egrave;re, j'enseigne aujourd'hui le contr&ocirc;le de gestion et la communication professionnelle en <strong>DCG et DSCG</strong> au <strong>campus La Salle &agrave; Lille</strong>.</p>
         <p>En parall&egrave;le, je d&eacute;veloppe des plateformes num&eacute;riques &mdash; de l'optimisation fiscale des dirigeants &agrave; la p&eacute;dagogie du DCG &mdash; et j'accompagne joueurs et clubs de football en tant qu'<strong>agent FIFA</strong>.</p>
