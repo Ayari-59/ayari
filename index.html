@@ -3,14 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohamed Ayari — Finance, Formation & Digital</title>
-<meta name="description" content="Mohamed Ayari, professeur de gestion et entrepreneur digital. Expertise en controle de gestion, DCG/DSCG, plateformes numeriques.">
+<title>Mohamed Ayari — Professeur de contr&ocirc;le de gestion, Concepteur web &amp; Consultant</title>
+<meta name="description" content="Mohamed Ayari, professeur de controle de gestion en DCG et DSCG a Lille. Concepteur de plateformes web, consultant en finance et management. Agent FIFA.">
 <meta name="author" content="Mohamed Ayari">
-<meta property="og:title" content="Mohamed Ayari — Analyser. Structurer. Developper.">
-<meta property="og:description" content="Expert en gestion et finance, entrepreneur digital. Au croisement de la finance, de la formation et du digital.">
+<meta property="og:title" content="Mohamed Ayari — Professeur de contr&ocirc;le de gestion &middot; Concepteur web &middot; Consultant">
+<meta property="og:description" content="Au croisement de l'enseignement, de la finance et du digital. Transformer le savoir en cours structures, les idees en plateformes et l'experience en solutions concretes.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ayari.pro">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mohamed Ayari — Professeur de contr&ocirc;le de gestion">
+<meta name="twitter:description" content="Enseignement, finance, digital. Transformer le savoir en cours structures, les idees en plateformes et l'experience en solutions concretes.">
 <link rel="canonical" href="https://ayari.pro">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect x='1' y='1' width='30' height='30' rx='6' fill='%230F2B4C'/&gt;&lt;text x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='18' fill='%23B8862D'&gt;AY&lt;/text&gt;&lt;/svg&gt;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mohamed Ayari","url":"https://ayari.pro","jobTitle":"Professeur de controle de gestion","worksFor":{"@type":"EducationalOrganization","name":"Campus La Salle Lille"},"knowsAbout":["Controle de gestion","Finance","DCG","DSCG","Plateformes web","Intelligence artificielle"],"sameAs":["https://www.linkedin.com/in/m-ayari/","https://github.com/Ayari-59"]}</script>
 <style>
 :root {
   --bg: #FAFAF8;
@@ -41,7 +46,7 @@
   --pil-form: #2563EB;
   --pil-dig: #059669;
   --pil-fifa: #D97706;
-  --pil-3: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig));
+  --pil-4: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig), var(--pil-fifa));
   --shadow: 0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.04);
   --shadow-l: 0 8px 40px rgba(0,0,0,.08);
   --f-d: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -136,7 +141,7 @@ img { max-width: 100%; display: block; }
 .hero-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; }
 .hero-bg canvas { width: 100%; height: 100%; }
 .hero-inner { position: relative; z-index: 1; max-width: var(--mw); margin: 0 auto; padding: 0 var(--gut); width: 100%; }
-.hero-stripe { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig)); z-index: 101; }
+.hero-stripe { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--pil-4); z-index: 101; }
 .hero-top { font-family: var(--f-m); font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; color: var(--fg3); margin-bottom: 1.8rem; display: flex; gap: .3em; flex-wrap: wrap; }
 .hero-top-w { transition: color .3s; }
 .hero-top-w:nth-child(1) { color: var(--pil-fin); }
@@ -202,7 +207,7 @@ img { max-width: 100%; display: block; }
 .about-text strong { color: var(--fg); font-weight: 600; }
 .about-text p + p { margin-top: 1rem; }
 .about-quote { border-left: none; padding-left: 1.5rem; margin-top: 1.5rem; position: relative; }
-.about-quote::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--pil-fin), var(--pil-form), var(--pil-dig)); border-radius: 2px; }
+.about-quote::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--pil-fin), var(--pil-form), var(--pil-dig), var(--pil-fifa)); border-radius: 2px; }
 .about-quote p { font-family: var(--f-d); font-size: 1.05rem; font-style: italic; color: var(--fg); line-height: 1.7; }
 .about-facts { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
 .about-fact { display: flex; align-items: center; gap: .5em; font-family: var(--f-m); font-size: .8rem; color: var(--fg2); }
@@ -213,6 +218,7 @@ img { max-width: 100%; display: block; }
 .about-fact:nth-child(4)::before { background: var(--pil-fifa); }
 .about-fact:nth-child(5)::before { background: var(--pil-fin); }
 .about-fact:nth-child(6)::before { background: var(--pil-form); }
+.about-fact:nth-child(7)::before { background: var(--pil-dig); }
 
 /* ─── PILLARS ─── */
 .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
@@ -261,8 +267,8 @@ img { max-width: 100%; display: block; }
 .project-badge { font-family: var(--f-m); font-size: .63rem; padding: .2em .55em; border-radius: 100px; letter-spacing: .03em; }
 .pb-live { background: #ECFDF5; color: #047857; }
 .pb-dev { background: #FEF3C7; color: #92400E; }
-:root[data-theme="dark"] .pb-live, .dark-badges .pb-live { background: #052E21; color: #34D399; }
-:root[data-theme="dark"] .pb-dev, .dark-badges .pb-dev { background: #2A1E06; color: #FCD34D; }
+:root[data-theme="dark"] .pb-live { background: #052E21; color: #34D399; }
+:root[data-theme="dark"] .pb-dev { background: #2A1E06; color: #FCD34D; }
 @media (prefers-color-scheme: dark) { .pb-live { background: #052E21; color: #34D399; } .pb-dev { background: #2A1E06; color: #FCD34D; } }
 :root[data-theme="light"] .pb-live { background: #ECFDF5; color: #047857; }
 :root[data-theme="light"] .pb-dev { background: #FEF3C7; color: #92400E; }
@@ -318,7 +324,7 @@ img { max-width: 100%; display: block; }
 
 /* ─── FOOTER ─── */
 footer { border-top: none; padding: 3rem 0; position: relative; }
-footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--pil-fin), var(--pil-form), var(--pil-dig)); }
+footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--pil-4); }
 .footer-inner { max-width: var(--mw); margin: 0 auto; padding: 0 var(--gut); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .footer-copy { font-size: .8rem; color: var(--fg3); }
 .footer-links { display: flex; gap: 1rem; align-items: center; }
@@ -368,12 +374,13 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
   <div class="hero-inner">
     <p class="hero-top"><span class="hero-top-w">Enseignement</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Finance</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Digital</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Entrepreneuriat</span></p>
     <h1>Mohamed<br>Ayari</h1>
-    <p class="hero-baseline">Professeur de gestion &middot; Expert en contr&ocirc;le de gestion &middot; Entrepreneur digital</p>
-    <p class="hero-sub">Comprendre. Transmettre. Structurer. D&eacute;velopper.<br>Je transforme les connaissances, les id&eacute;es et les besoins en solutions concr&egrave;tes.</p>
+    <p class="hero-baseline">Professeur de contr&ocirc;le de gestion &middot; Concepteur de plateformes web &middot; Consultant</p>
+    <p class="hero-sub">Au croisement de l'enseignement, de la finance et du digital.<br>Transformer le savoir en cours structur&eacute;s, les id&eacute;es en plateformes et l'exp&eacute;rience en solutions concr&egrave;tes.</p>
     <div class="hero-roles">
       <span class="hero-role hr-ens">Enseignement &amp; Transmission</span>
       <span class="hero-role hr-fin">Finance &amp; Gestion</span>
-      <span class="hero-role hr-dig">Digital &amp; Entrepreneuriat</span>
+      <span class="hero-role hr-dig">Digital &amp; Plateformes</span>
+      <span class="hero-role hr-fifa">Sport &amp; Football</span>
     </div>
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-primary">Collaborer</a>
@@ -390,7 +397,7 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
     <div class="sec-head anim">
       <p class="sec-label">Profil</p>
       <h2 class="sec-title">&Agrave; propos</h2>
-      <p class="sec-desc"></p>
+      <p class="sec-desc">Professeur, concepteur, consultant.</p>
     </div>
     <div class="about-content anim">
       <div class="about-photo">
