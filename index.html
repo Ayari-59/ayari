@@ -189,11 +189,6 @@ img { max-width: 100%; display: block; }
 .about-photo { width: 140px; height: 140px; border-radius: 50%; overflow: hidden; border: 3px solid var(--border); box-shadow: var(--shadow-l); margin-bottom: 1.5rem; flex-shrink: 0; }
 .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
 .about-content { max-width: 100%; }
-.about-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1.5rem; }
-.about-col-title { font-family: var(--f-d); font-size: 1.1rem; font-weight: 600; color: var(--fg); margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 2px solid var(--border); }
-.about-col-title.col-ped { border-bottom-color: var(--pil-form); }
-.about-col-title.col-par { border-bottom-color: var(--pil-fin); }
-@media (max-width: 700px) { .about-columns { grid-template-columns: 1fr; gap: 2rem; } }
 .about-parcours { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
 @media (max-width: 600px) { .about-parcours { grid-template-columns: 1fr; } }
 .about-station { padding: 1.2rem 1.4rem; border: 1px solid var(--border); border-radius: var(--r); background: var(--card); border-left: 3px solid var(--pil-fin); }
@@ -220,7 +215,7 @@ img { max-width: 100%; display: block; }
 .about-fact:nth-child(6)::before { background: var(--pil-form); }
 
 /* ─── PILLARS ─── */
-.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
 @media (max-width: 900px) { .pillars { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .pillars { grid-template-columns: 1fr; } }
 .pillar { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 1.8rem 1.5rem; display: flex; flex-direction: column; gap: .8rem; transition: transform .25s, box-shadow .25s; position: relative; overflow: hidden; }
@@ -371,13 +366,13 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
 <section class="hero" id="hero">
   <div class="hero-bg"><canvas id="geo"></canvas></div>
   <div class="hero-inner">
-    <p class="hero-top"><span class="hero-top-w">Finance</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Formation</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Digital</span></p>
+    <p class="hero-top"><span class="hero-top-w">Enseignement</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Finance</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Digital</span><span class="hero-top-w">&middot;</span><span class="hero-top-w">Entrepreneuriat</span></p>
     <h1>Mohamed<br>Ayari</h1>
-    <p class="hero-baseline">Des id&eacute;es aux projets. Des projets aux opportunit&eacute;s.</p>
-    <p class="hero-sub">Il existe un fil conducteur derri&egrave;re mes diff&eacute;rentes activit&eacute;s : aider &agrave; comprendre, structurer et d&eacute;velopper.</p>
+    <p class="hero-baseline">Professeur de gestion &middot; Expert en contr&ocirc;le de gestion &middot; Entrepreneur digital</p>
+    <p class="hero-sub">Comprendre. Transmettre. Structurer. D&eacute;velopper.<br>Je transforme les connaissances, les id&eacute;es et les besoins en solutions concr&egrave;tes.</p>
     <div class="hero-roles">
+      <span class="hero-role hr-ens">Enseignement &amp; Transmission</span>
       <span class="hero-role hr-fin">Finance &amp; Gestion</span>
-      <span class="hero-role hr-ens">Formation &amp; Transmission</span>
       <span class="hero-role hr-dig">Digital &amp; Entrepreneuriat</span>
     </div>
     <div class="hero-ctas">
@@ -401,21 +396,14 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
       <div class="about-photo">
         <img src="photo.png" alt="Mohamed Ayari" width="140" height="140">
       </div>
-      <div class="about-columns about-text">
-        <div>
-          <p class="about-col-title col-ped">Ma p&eacute;dagogie</p>
-          <p>Professeur de contr&ocirc;le de gestion en DCG et DSCG au Campus La Salle &agrave; Lille, j'enseigne une discipline au c&oelig;ur du pilotage et de la prise de d&eacute;cision en entreprise.</p>
-          <p>Ma conviction : comprendre avant de calculer. Savoir ce que l'on cherche &agrave; mesurer, pourquoi on le mesure et ce que l'on pourra en d&eacute;duire change tout. Les chiffres deviennent alors non pas une finalit&eacute;, mais un v&eacute;ritable outil d'analyse et d'aide &agrave; la d&eacute;cision.</p>
-          <p>Je cherche ainsi &agrave; faire &eacute;merger chez les &eacute;tudiants le besoin de savoir, et &agrave; leur donner des grilles de lecture qui leur permettent d'aborder des probl&eacute;matiques parfois complexes avec davantage de clart&eacute;. L'objectif n'est pas seulement de ma&icirc;triser des m&eacute;thodes, mais de d&eacute;velopper leur capacit&eacute; &agrave; questionner une situation, explorer les solutions possibles et prendre du recul sur les choix effectu&eacute;s.</p>
-        </div>
-        <div>
-          <p class="about-col-title col-par">Mon parcours</p>
-          <p>Finance, contr&ocirc;le de gestion, management, formation, digital. Des domaines diff&eacute;rents, une m&ecirc;me question : comment transformer une ambition en r&eacute;alit&eacute; ?</p>
-          <p>J'accompagne porteurs de projets, entrepreneurs, dirigeants et experts qui veulent structurer, d&eacute;velopper ou r&eacute;inventer. L'IA et la transformation digitale sont aujourd'hui de nouveaux leviers que j'int&egrave;gre &agrave; cette d&eacute;marche.</p>
-        </div>
+      <div class="about-text">
+        <p>Professeur de gestion, sp&eacute;cialiste du contr&ocirc;le de gestion et de la finance, je d&eacute;veloppe depuis plusieurs ann&eacute;es une activit&eacute; &agrave; la crois&eacute;e de l'enseignement, du conseil, du digital et de l'entrepreneuriat.</p>
+        <p>Enseigner constitue le fil rouge de mon parcours. De la recherche en sciences de gestion &agrave; l'enseignement sup&eacute;rieur, puis &agrave; la formation en DCG et DSCG, j'ai toujours cherch&eacute; &agrave; rendre accessibles des notions complexes et &agrave; transformer les connaissances en outils directement utilisables.</p>
+        <p>Cette exp&eacute;rience m'a progressivement conduit vers d'autres terrains : accompagnement de projets, transformation digitale, intelligence artificielle, cr&eacute;ation de plateformes SaaS et entrepreneuriat.</p>
+        <p>Aujourd'hui, je ne s&eacute;pare pas ces activit&eacute;s : je les fais dialoguer. La finance apporte la rigueur, l'enseignement la capacit&eacute; &agrave; transmettre, le digital les moyens de cr&eacute;er et le sport un terrain d'application strat&eacute;gique particuli&egrave;rement stimulant.</p>
       </div>
       <div class="about-quote">
-        <p>Finance, strat&eacute;gie, transmission, technologie et sport : des univers diff&eacute;rents, mais une m&ecirc;me ambition &mdash; cr&eacute;er les conditions du d&eacute;veloppement.</p>
+        <p>L'enseignement m'a appris &agrave; transmettre. La finance m'a appris &agrave; analyser. Le management m'a appris &agrave; d&eacute;cider. Le digital m'a appris &agrave; cr&eacute;er. L'entrepreneuriat m'apprend &agrave; transformer.</p>
       </div>
       <div class="about-facts">
         <span class="about-fact">Tunis &rarr; Nice &rarr; Montargis &rarr; Lille</span>
@@ -429,19 +417,19 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
     </div>
     <div class="about-parcours anim" style="transition-delay:.1s">
       <div class="about-station">
-        <p><strong>Tunis</strong> &mdash; Tout commence ici. MSTCF &agrave; l'INTEC / Universit&eacute; Libre de Tunis, puis premier poste en contr&ocirc;le de gestion au Groupe du Belv&eacute;d&egrave;re. C'est l&agrave; que na&icirc;t le go&ucirc;t pour les chiffres qui racontent une histoire.</p>
+        <p><strong>Tunis</strong> &mdash; Les premi&egrave;res bases. MSTCF, contr&ocirc;le de gestion au Groupe du Belv&eacute;d&egrave;re. Premi&egrave;re exp&eacute;rience concr&egrave;te du lien entre chiffres, performance et d&eacute;cision.</p>
       </div>
       <div class="about-station">
-        <p><strong>Nice</strong> &mdash; Cap sur la recherche. DEA de Sciences de gestion &agrave; l'IAE, &eacute;cole doctorale. Enseignant &agrave; <strong>Polytech Sophia Antipolis</strong>, &agrave; l'<strong>Institut Saint-Joseph</strong>, au lyc&eacute;e h&ocirc;telier <strong>Anne-Sophie Pic &agrave; Toulon</strong>. Et du conseil, parce qu'un probl&egrave;me pos&eacute; par un vrai dirigeant, &ccedil;a ne s'invente pas en amphi.</p>
+        <p><strong>Nice</strong> &mdash; Recherche &amp; enseignement. DEA de Sciences de gestion &agrave; l'IAE. Enseignant &agrave; <strong>Polytech Sophia Antipolis</strong>, &agrave; l'<strong>Institut Saint-Joseph</strong>, au lyc&eacute;e h&ocirc;telier <strong>Anne-Sophie Pic</strong>. C'est ici que se construit v&eacute;ritablement mon identit&eacute; d'enseignant.</p>
       </div>
       <div class="about-station">
-        <p><strong>Montargis</strong> &mdash; Professeur de gestion appliqu&eacute;e au <strong>lyc&eacute;e h&ocirc;telier</strong>. L'enseignement technique, concret, les pieds sur terre. Pilotage des premi&egrave;res exp&eacute;riences de classes num&eacute;riques. Une &eacute;tape qui ancre la p&eacute;dagogie dans le r&eacute;el.</p>
+        <p><strong>Montargis</strong> &mdash; L'enseignement appliqu&eacute;. Professeur de gestion appliqu&eacute;e au <strong>lyc&eacute;e h&ocirc;telier</strong>. P&eacute;dagogie, enseignement technique et pilotage des premi&egrave;res exp&eacute;riences de classes num&eacute;riques.</p>
       </div>
       <div class="about-station">
-        <p><strong>Lille</strong> (depuis 2019) &mdash; Le chapitre actuel. Contr&ocirc;le de gestion et communication professionnelle au <strong>campus La Salle</strong>, enseignant &agrave; l'<strong>Universit&eacute; Catholique de Lille</strong>. Le virage num&eacute;rique, l'IA, l'entrepreneuriat digital. Tout ce que j'ai appris, je le transforme en plateformes.</p>
+        <p><strong>Lille</strong> (depuis 2019) &mdash; Enseigner, cr&eacute;er, transmettre. Professeur de gestion au <strong>campus La Salle</strong> et &agrave; l'<strong>Universit&eacute; Catholique de Lille</strong>. Parall&egrave;lement : plateformes p&eacute;dagogiques, entrepreneuriat num&eacute;rique, IA et cr&eacute;ation de solutions SaaS.</p>
       </div>
       <div class="about-station">
-        <p><strong>Et en fil rouge</strong> &mdash; Une curiosit&eacute; qui ne s'arr&ecirc;te jamais. Technicien PNL, int&eacute;r&ecirc;t pour l'analyse transactionnelle et l'IKIGAI. Trader passionn&eacute;, adepte de l'<strong>Ichimoku Kinko Hyo</strong>, la rigueur analytique faite m&eacute;thode. Et depuis novembre 2024, agent FIFA : la finance et la strat&eacute;gie port&eacute;es sur le terrain.</p>
+        <p><strong>Aujourd'hui</strong> &mdash; De la transmission &agrave; la cr&eacute;ation. Enseignant, consultant, entrepreneur digital, agent FIFA. Un parcours qui r&eacute;unit enseignement, expertise, technologie et entrepreneuriat.</p>
       </div>
     </div>
   </div>
@@ -451,28 +439,34 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
 <section class="sec sec-alt" id="piliers">
   <div class="wrap">
     <div class="sec-head anim">
-      <p class="sec-label">Trois piliers</p>
+      <p class="sec-label">Quatre dimensions</p>
       <h2 class="sec-title">Un profil &agrave; intersections</h2>
-      <p class="sec-desc">L&agrave; o&ugrave; d'autres s&eacute;parent finance, enseignement et digital, je les connecte.</p>
+      <p class="sec-desc">Enseignant &middot; Expert &middot; Entrepreneur &middot; Cr&eacute;ateur</p>
     </div>
     <div class="pillars">
-      <div class="pillar anim" style="--p-color: var(--pil-fin)">
+      <div class="pillar anim" style="--p-color: var(--pil-form)">
+        <div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+        <h3>Enseignement &amp; Transmission</h3>
+        <p>Professeur de gestion en DCG et DSCG. Concevoir des cours, structurer les connaissances, cr&eacute;er des ressources p&eacute;dagogiques et accompagner les &eacute;tudiants.</p>
+        <a href="#formation" class="pillar-link">D&eacute;couvrir <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="pillar anim" style="--p-color: var(--pil-fin); transition-delay:.06s">
         <div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
         <h3>Finance &amp; Management</h3>
-        <p>Contr&ocirc;le de gestion, pilotage de la performance, analyse financi&egrave;re, aide &agrave; la d&eacute;cision. L'expertise qui structure toutes les autres.</p>
+        <p>Contr&ocirc;le de gestion, pilotage de la performance, analyse financi&egrave;re, comptabilit&eacute; et aide &agrave; la d&eacute;cision. Une expertise construite par l'enseignement, la pratique et la recherche.</p>
         <a href="#expertise" class="pillar-link">En savoir plus <span class="arr">&rarr;</span></a>
-      </div>
-      <div class="pillar anim" style="--p-color: var(--pil-form); transition-delay:.06s">
-        <div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-        <h3>Formation &amp; Transmission</h3>
-        <p>DCG, DSCG, contr&ocirc;le de gestion, finance. Enseigner, c'est rendre accessible ce qui est complexe, en amphi comme sur une plateforme.</p>
-        <a href="#formation" class="pillar-link">D&eacute;couvrir <span class="arr">&rarr;</span></a>
       </div>
       <div class="pillar anim" style="--p-color: var(--pil-dig); transition-delay:.12s">
         <div class="pillar-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
         <h3>Digital, IA &amp; Entrepreneuriat</h3>
-        <p>Plateformes SaaS, EdTech, FinTech, LegalTech, intelligence artificielle. Transformer l'expertise m&eacute;tier en produits num&eacute;riques.</p>
+        <p>Transformer l'expertise m&eacute;tier en produits et services num&eacute;riques : EdTech, FinTech, LegalTech, SaaS et solutions utilisant l'intelligence artificielle.</p>
         <a href="#projets" class="pillar-link">Voir les projets <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="pillar anim" style="--p-color: var(--pil-fifa); transition-delay:.18s">
+        <div class="pillar-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/><path d="M2 12h20"/></svg></div>
+        <h3>Sport &amp; Football</h3>
+        <p>Management sportif, gouvernance des clubs, &eacute;conomie du football et accompagnement des joueurs. Mon activit&eacute; d'agent FIFA prolonge naturellement cette approche.</p>
+        <a href="#fifa" class="pillar-link">En savoir plus <span class="arr">&rarr;</span></a>
       </div>
     </div>
   </div>
@@ -521,21 +515,22 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
 <section class="sec" id="formation">
   <div class="wrap">
     <div class="sec-head anim">
-      <p class="sec-label sec-label-form">Enseignement</p>
-      <h2 class="sec-title">Former, transmettre, outiller</h2>
-      <p class="sec-desc">L'enseignement comme levier de d&eacute;veloppement.</p>
+      <p class="sec-label sec-label-form">Enseignement &amp; Transmission</p>
+      <h2 class="sec-title">Enseigner pour comprendre. Concevoir pour transmettre.</h2>
+      <p class="sec-desc">Professeur de gestion et sp&eacute;cialiste du contr&ocirc;le de gestion, j'accompagne depuis plusieurs ann&eacute;es des &eacute;tudiants dans leur acquisition des comp&eacute;tences n&eacute;cessaires aux m&eacute;tiers de la finance, de la comptabilit&eacute; et du management.</p>
     </div>
     <div class="formation-content">
       <div class="formation-text anim">
-        <p>Professeur au <strong>campus La Salle &agrave; Lille</strong>, j'enseigne le contr&ocirc;le de gestion et la communication professionnelle aux &eacute;tudiants en DCG et DSCG.</p>
-        <p>Ma conviction : les probl&eacute;matiques les plus complexes deviennent accessibles quand on trouve la bonne grille de lecture. C'est cette approche que j'applique en cours comme dans la conception de mes plateformes p&eacute;dagogiques.</p>
-        <p>Aujourd'hui, je travaille &agrave; mettre l'<strong>intelligence artificielle au service des apprentissages</strong>, pour personnaliser les parcours, enrichir les ressources et rendre l'&eacute;tudiant acteur de sa progression.</p>
+        <p>Professeur de contr&ocirc;le de gestion en DCG et DSCG au <strong>Campus La Salle &agrave; Lille</strong>, j'enseigne une discipline au c&oelig;ur du pilotage et de la prise de d&eacute;cision en entreprise.</p>
+        <p>Ma conviction : comprendre avant de calculer. Savoir ce que l'on cherche &agrave; mesurer, pourquoi on le mesure et ce que l'on pourra en d&eacute;duire change tout. Les chiffres deviennent alors non pas une finalit&eacute;, mais un v&eacute;ritable outil d'analyse et d'aide &agrave; la d&eacute;cision.</p>
+        <p>Je cherche ainsi &agrave; faire &eacute;merger chez les &eacute;tudiants le besoin de savoir, et &agrave; leur donner des grilles de lecture qui rendent accessibles des probl&eacute;matiques parfois complexes. L'objectif n'est pas seulement de ma&icirc;triser des m&eacute;thodes, mais de d&eacute;velopper la capacit&eacute; &agrave; questionner une situation, explorer les solutions possibles et prendre du recul.</p>
+        <p>Mais mon activit&eacute; p&eacute;dagogique ne s'arr&ecirc;te pas au cours. Je con&ccedil;ois &eacute;galement des ressources p&eacute;dagogiques, plateformes num&eacute;riques, QCM, exercices et parcours d'apprentissage utilisant l'<strong>intelligence artificielle</strong>.</p>
         <div style="margin-top:1.5rem">
           <a href="https://www.objectif-dcg.fr" target="_blank" rel="noopener" class="btn btn-outline">D&eacute;couvrir Objectif-DCG.fr <span style="margin-left:.3em">&rarr;</span></a>
         </div>
       </div>
       <div class="formation-highlight anim" style="transition-delay:.1s">
-        <h4>Objectif-DCG.fr en chiffres</h4>
+        <h4>De la salle de classe &agrave; la plateforme</h4>
         <div class="formation-stat"><strong>28</strong><span>chapitres structur&eacute;s</span></div>
         <div class="formation-stat"><strong>7</strong><span>onglets par chapitre</span></div>
         <div class="formation-stat"><strong>482</strong><span>QCM interactifs</span></div>
@@ -804,16 +799,17 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
     var opa = dk ? .07 : .14;
     var opaFill = dk ? .03 : .05;
     var cols = dk
-      ? ['107,163,232', '96,165,250', '52,211,153']
-      : ['23,70,162', '37,99,235', '5,150,105'];
+      ? ['96,165,250', '107,163,232', '52,211,153', '251,191,36']
+      : ['37,99,235', '23,70,162', '5,150,105', '217,119,6'];
 
     var nodes = [
       { x: w*.78, y: h*.32, r: Math.min(w,h)*.24, rot: ang },
       { x: w*.50, y: h*.65, r: Math.min(w,h)*.20, rot: -ang*1.3 },
-      { x: w*.85, y: h*.72, r: Math.min(w,h)*.16, rot: ang*.7 }
+      { x: w*.85, y: h*.72, r: Math.min(w,h)*.16, rot: ang*.7 },
+      { x: w*.22, y: h*.40, r: Math.min(w,h)*.13, rot: ang*1.1 }
     ];
 
-    for (var n = 0; n < 3; n++) {
+    for (var n = 0; n < 4; n++) {
       var nd = nodes[n], col = cols[n];
 
       ctx.strokeStyle = 'rgba('+col+','+opa+')';
@@ -852,6 +848,15 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
           var tr = nd.r * (.35 + j * .2);
           ctx.beginPath();
           for (var k = 0; k < 3; k++) { var ta = k * Math.PI * 2 / 3 - Math.PI/2; ctx[k===0?'moveTo':'lineTo'](Math.cos(ta)*tr, Math.sin(ta)*tr); }
+          ctx.closePath(); ctx.stroke();
+        }
+        ctx.restore();
+      } else if (n === 3) {
+        ctx.save(); ctx.translate(nd.x, nd.y); ctx.rotate(nd.rot);
+        for (var j = 0; j < 2; j++) {
+          var pr = nd.r * (.45 + j * .25);
+          ctx.beginPath();
+          for (var k = 0; k < 5; k++) { var pa = k * Math.PI * 2 / 5 - Math.PI/2; ctx[k===0?'moveTo':'lineTo'](Math.cos(pa)*pr, Math.sin(pa)*pr); }
           ctx.closePath(); ctx.stroke();
         }
         ctx.restore();
