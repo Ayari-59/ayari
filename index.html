@@ -189,6 +189,11 @@ img { max-width: 100%; display: block; }
 .about-photo { width: 140px; height: 140px; border-radius: 50%; overflow: hidden; border: 3px solid var(--border); box-shadow: var(--shadow-l); margin-bottom: 1.5rem; flex-shrink: 0; }
 .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
 .about-content { max-width: 72ch; }
+.about-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1.5rem; }
+.about-col-title { font-family: var(--f-d); font-size: 1.1rem; font-weight: 600; color: var(--fg); margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 2px solid var(--border); }
+.about-col-title.col-ped { border-bottom-color: var(--pil-form); }
+.about-col-title.col-par { border-bottom-color: var(--pil-fin); }
+@media (max-width: 700px) { .about-columns { grid-template-columns: 1fr; gap: 2rem; } }
 .about-parcours { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
 @media (max-width: 600px) { .about-parcours { grid-template-columns: 1fr; } }
 .about-station { padding: 1.2rem 1.4rem; border: 1px solid var(--border); border-radius: var(--r); background: var(--card); border-left: 3px solid var(--pil-fin); }
@@ -396,15 +401,21 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
       <div class="about-photo">
         <img src="photo.png" alt="Mohamed Ayari" width="140" height="140">
       </div>
-      <div class="about-text">
-        <p>Professeur de contr&ocirc;le de gestion en DCG et DSCG au Campus La Salle &agrave; Lille, j'enseigne une discipline au c&oelig;ur du pilotage et de la prise de d&eacute;cision en entreprise.</p>
-        <p>Ma conviction : comprendre avant de calculer. Savoir ce que l'on cherche &agrave; mesurer, pourquoi on le mesure et ce que l'on pourra en d&eacute;duire change tout dans la mani&egrave;re d'aborder un probl&egrave;me.</p>
-        <p>Je cherche ainsi &agrave; faire &eacute;merger chez les &eacute;tudiants le besoin de savoir, et &agrave; leur donner des grilles de lecture qui leur permettent d'aborder des probl&eacute;matiques parfois complexes avec davantage de clart&eacute;. L'objectif n'est pas seulement de ma&icirc;triser des m&eacute;thodes ou d'appliquer des formules, mais de d&eacute;velopper leur capacit&eacute; &agrave; questionner une situation, explorer les solutions possibles, interpr&eacute;ter les r&eacute;sultats et prendre du recul sur les choix effectu&eacute;s.</p>
-        <p>Les chiffres deviennent alors non pas une finalit&eacute;, mais un v&eacute;ritable outil d'analyse, de compr&eacute;hension et d'aide &agrave; la d&eacute;cision.</p>
-        <p>Plus largement, mon parcours se situe au croisement de la finance, du contr&ocirc;le de gestion, du management, de la formation et du digital. Des domaines diff&eacute;rents, mais qui r&eacute;pondent souvent aux m&ecirc;mes questions : O&ugrave; en sommes-nous ? O&ugrave; voulons-nous aller ? Avec quelles ressources ? Et comment transformer une ambition en r&eacute;alit&eacute; ?</p>
-        <p>J'accompagne ainsi des porteurs de projets, entrepreneurs, dirigeants et experts qui souhaitent structurer une activit&eacute;, d&eacute;velopper une id&eacute;e, am&eacute;liorer leur organisation ou explorer de nouvelles opportunit&eacute;s.</p>
-        <p>La transformation digitale et l'intelligence artificielle constituent aujourd'hui de nouveaux leviers pour repenser les organisations, cr&eacute;er des services et faire &eacute;merger de nouveaux mod&egrave;les.</p>
-        <p>Le sport constitue un autre champ d'application de cette approche. Je m'int&eacute;resse particuli&egrave;rement au management sportif, &agrave; la gouvernance, &agrave; la structuration et au d&eacute;veloppement des clubs. Mon activit&eacute; de FIFA Football Agent me permet &eacute;galement d'&eacute;voluer au plus pr&egrave;s des enjeux li&eacute;s aux joueurs, aux clubs et &agrave; l'&eacute;cosyst&egrave;me du football.</p>
+      <div class="about-columns about-text">
+        <div>
+          <p class="about-col-title col-ped">Ma p&eacute;dagogie</p>
+          <p>Professeur de contr&ocirc;le de gestion en DCG et DSCG au Campus La Salle &agrave; Lille, j'enseigne une discipline au c&oelig;ur du pilotage et de la prise de d&eacute;cision en entreprise.</p>
+          <p>Ma conviction : comprendre avant de calculer. Savoir ce que l'on cherche &agrave; mesurer, pourquoi on le mesure et ce que l'on pourra en d&eacute;duire change tout dans la mani&egrave;re d'aborder un probl&egrave;me.</p>
+          <p>Je cherche ainsi &agrave; faire &eacute;merger chez les &eacute;tudiants le besoin de savoir, et &agrave; leur donner des grilles de lecture qui leur permettent d'aborder des probl&eacute;matiques parfois complexes avec davantage de clart&eacute;. L'objectif n'est pas seulement de ma&icirc;triser des m&eacute;thodes ou d'appliquer des formules, mais de d&eacute;velopper leur capacit&eacute; &agrave; questionner une situation, explorer les solutions possibles, interpr&eacute;ter les r&eacute;sultats et prendre du recul sur les choix effectu&eacute;s.</p>
+          <p>Les chiffres deviennent alors non pas une finalit&eacute;, mais un v&eacute;ritable outil d'analyse, de compr&eacute;hension et d'aide &agrave; la d&eacute;cision.</p>
+        </div>
+        <div>
+          <p class="about-col-title col-par">Mon parcours</p>
+          <p>Mon parcours se situe au croisement de la finance, du contr&ocirc;le de gestion, du management, de la formation et du digital. Des domaines diff&eacute;rents, mais qui r&eacute;pondent souvent aux m&ecirc;mes questions : O&ugrave; en sommes-nous ? O&ugrave; voulons-nous aller ? Avec quelles ressources ? Et comment transformer une ambition en r&eacute;alit&eacute; ?</p>
+          <p>J'accompagne ainsi des porteurs de projets, entrepreneurs, dirigeants et experts qui souhaitent structurer une activit&eacute;, d&eacute;velopper une id&eacute;e, am&eacute;liorer leur organisation ou explorer de nouvelles opportunit&eacute;s.</p>
+          <p>La transformation digitale et l'intelligence artificielle constituent aujourd'hui de nouveaux leviers pour repenser les organisations, cr&eacute;er des services et faire &eacute;merger de nouveaux mod&egrave;les.</p>
+          <p>Le sport constitue un autre champ d'application de cette approche. Je m'int&eacute;resse particuli&egrave;rement au management sportif, &agrave; la gouvernance, &agrave; la structuration et au d&eacute;veloppement des clubs. Mon activit&eacute; de FIFA Football Agent me permet &eacute;galement d'&eacute;voluer au plus pr&egrave;s des enjeux li&eacute;s aux joueurs, aux clubs et &agrave; l'&eacute;cosyst&egrave;me du football.</p>
+        </div>
       </div>
       <div class="about-quote">
         <p>Finance, strat&eacute;gie, transmission, technologie et sport : des univers diff&eacute;rents, mais une m&ecirc;me ambition &mdash; cr&eacute;er les conditions du d&eacute;veloppement.</p>
